@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{user/layouts/layout}"
+>
+<head>
+    <title>AutoSell SignIn</title>
+    <!--    <link rel="stylesheet" >-->
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container content p-15">
+        <div class="mt-80 mb-120 row">
+            <form class="col-md-offset-4 col-md-4" method="post">
+                <h3>Login form</h3>
+                <p>Login with username and password only.</p>
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">
+                        Invalid Credentials.
+                    </div>
+                </div>
+                <div th:if="${param.error_msg}">
+                    <div class="alert alert-danger" th:text="${param.error_msg}">
+                        Invalid Credentials.
+                    </div>
+                </div>
+                <div th:if="${param.success_msg}">
+                    <div class="alert alert-danger" th:text="${param.error_msg}">
+                        Invalid Credentials.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
