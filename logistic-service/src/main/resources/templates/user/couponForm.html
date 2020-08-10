@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+       layout:decorate="~{/user/layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Points System</title>
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <form action="/coupon_save" method="post" class="form-inline">
+        <small id="couponHelp" class="form-text text-muted" >Each a 100 points can redeem $1</small>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="points" class="sr-only">points</label>
+            <input type="text" class="form-control" id="points" placeholder="Points to redeem">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Points to redeem</button>
+        <button type="submit" class="btn btn-primary mb-2">PointsSave</button>
+    </form>
+</div>
+
+</body>
+</html>

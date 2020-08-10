@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{user/layouts/layout}"
+>
+<head>
+    <title>Sample</title>
+    <!--    <link rel="stylesheet" >-->
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container content form-group p-15">
+        <div class="row form-group">
+            <div th:if="${error_msg != null}">
+                <div class="alert alert-danger" role="alert" th:text="${error_msg}">Error message</div>
+            </div>
+            <div th:if="${success_msg != null}">
+                <div class="alert alert-success" role="alert" th:text="${success_msg}">Error message</div>
+            </div>
+        </div>
+        <div class="row item-box mt-15 form-group" style="padding: 15px;">
+            <div class="col-lg-9">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                    </tr>
+                    </thead>
+                    <tbody class="cart-item-body">
+
+                        <tr class="item-container" th:each="product:${session.products}" th:attr="data-key=${product.id}">
+                            <td width="20%">
+                                <a  href="#" th:attr="data-key=${product.id}">
+                                    <img th:alt="${product.name}" class="img-responsive" th:src="@{/images/{image_name}(image_name = ${product.productImage})}" />
+                                    <p class="item-name" th:text="${product.name}"></p>
+                                </a>
+                            </td>
+                            <td class="unit-price" th:attr="data-unitprice=${product.price}" th:text="${product.price}">
+                                USD
+                            </td>
+
+                            <td>
+                                <input class="form-control qty-input" type="number" min="1" th:value="${product.qty}">
+                            </td>
+                            <td class="total-price" th:text="${product.qty*product.price}">
+                                USD
+                            </td>
+
+                            <td>
+                                <a href="#" class="btn btn-danger remove-btn"><span class="glyphicon glyphicon-remove"></span></a>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-3 pt-15">
+                <p style="font-weight: bold">Grand Total : USD <span class="grand-total" th:text="${session.grand_total}">USD </span></p>
+                <a class="btn btn-info" th:href="@{/buyer/address}">Proceed to checkout <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-default mt-15" th:href="@{/}"><span class="glyphicon glyphicon-chevron-left"></span> Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
