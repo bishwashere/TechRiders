@@ -1,13 +1,13 @@
-package com.techriders.wirehouse;
+package com.techriders.frontservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WirehouseApplication {
+public class FrontServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WirehouseApplication.class, args);
+        SpringApplication.run(FrontServiceApplication.class, args);
     }
 
 }
