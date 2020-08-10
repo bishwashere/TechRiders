@@ -40,7 +40,7 @@ public class UserController {
 
             SimpleMailMessage mail = new SimpleMailMessage();
 
-            mail.setFrom("AutoSell");
+            mail.setFrom("TechRiders");
             mail.setTo(user.getEmail());
             mail.setSubject("Account Activated");
             StringBuffer stringBuffer = new StringBuffer();
@@ -48,10 +48,10 @@ public class UserController {
             stringBuffer.append(user.getFirstName());
             stringBuffer.append(",");
             stringBuffer.append("\n");
-            stringBuffer.append("Your account is activated in AutoSell.\n");
+            stringBuffer.append("Your account is activated in TechRiders.\n");
             stringBuffer.append("Now you can login with your username and password.");
             stringBuffer.append("\nThank you.\n");
-            stringBuffer.append("AutoSell Team");
+            stringBuffer.append("TechRiders Team");
 
             mail.setText(stringBuffer.toString());
             javaMailSender.send(mail);
@@ -72,7 +72,7 @@ public class UserController {
 
             User user = userService.findById(id);
 
-            mail.setFrom("AutoSell");
+            mail.setFrom("TechRiders");
             mail.setTo(user.getEmail());
             mail.setSubject("Account has been deactivated");
             StringBuffer stringBuffer = new StringBuffer();
@@ -80,10 +80,10 @@ public class UserController {
             stringBuffer.append(user.getFirstName());
             stringBuffer.append(",");
             stringBuffer.append("\n");
-            stringBuffer.append("Your account is deactivated in AutoSell.\n");
+            stringBuffer.append("Your account is deactivated in TechRiders.\n");
             stringBuffer.append("If you want to know reason. You can contact with admin.");
             stringBuffer.append("\nThank you.\n");
-            stringBuffer.append("AutoSell Team");
+            stringBuffer.append("TechRiders Team");
             mail.setText(stringBuffer.toString());
             javaMailSender.send(mail);
 

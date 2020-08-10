@@ -103,7 +103,7 @@ public class PaymentController {
 
             try {
                 SimpleMailMessage mail = new SimpleMailMessage();
-                mail.setFrom("AutoSell");
+                mail.setFrom("TechRiders");
                 mail.setTo(user.getEmail());
                 mail.setSubject("Order Placed.");
                 StringBuffer stringBuffer = new StringBuffer();
@@ -111,11 +111,11 @@ public class PaymentController {
                 stringBuffer.append(user.getFirstName());
                 stringBuffer.append(",");
                 stringBuffer.append("\n");
-                stringBuffer.append("You placed order in AutoSell successfully.\n");
-                stringBuffer.append("We are very happy for choosing AutoSell.");
+                stringBuffer.append("You placed order in TechRiders successfully.\n");
+                stringBuffer.append("We are very happy for choosing TechRiders.");
                 stringBuffer.append("Your transaction Id is:"+productOrder.getTransactionId());
                 stringBuffer.append("\nThank you.\n");
-                stringBuffer.append("AutoSell Team");
+                stringBuffer.append("TechRiders Team");
                 mail.setText(stringBuffer.toString());
                 javaMailSender.send(mail);
             } catch (NoSuchElementException e) {
