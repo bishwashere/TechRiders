@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class Product implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     @NotBlank
@@ -32,7 +32,8 @@ public class Product implements Serializable {
     @NotNull
     Integer catId;
 
-    @Size(max = 65535)
+
+    @Column(name="description", length=800)
     private String description;
 
     private String productImage;
@@ -108,20 +109,20 @@ public class Product implements Serializable {
         this.productImage = productImage;
     }
 
-    public Long getAddedBy() {
-        return addedBy;
-    }
-
-    public void setAddedBy(Long addedBy) {
-        this.addedBy = addedBy;
-    }
-
     public boolean isSoldStatus() {
         return soldStatus;
     }
 
     public void setSoldStatus(boolean soldStatus) {
         this.soldStatus = soldStatus;
+    }
+
+    public Long getAddedBy() {
+        return addedBy;
+    }
+
+    public void setAddedBy(Long addedBy) {
+        this.addedBy = addedBy;
     }
 
     public Integer getQty() {

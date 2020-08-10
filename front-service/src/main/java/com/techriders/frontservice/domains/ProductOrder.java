@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 public class ProductOrder {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long transactionId;
 

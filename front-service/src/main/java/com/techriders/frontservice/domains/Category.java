@@ -1,23 +1,22 @@
 package com.techriders.frontservice.domains;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
 public class Category {
+
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Size(min=6,max=20)
     @NotBlank
     private String name;
 
-    @Size(max = 65535)
+    @Column(name="description", length=800)
     private String description;
 
     public Category() {
