@@ -29,10 +29,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     DataSource dataSource;
 
-    @Autowired
-    AuthSuccessHandler successHandler;
-
-
     @Bean
     SimpleUrlAuthenticationFailureHandler authFailureHandler(){
         return new SimpleUrlAuthenticationFailureHandler();
@@ -41,29 +37,19 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-//        auth.inMemoryAuthentication()
-//                .withUser("username").password("password").roles("SELLER")
-//                .and()
-//                .withUser("username").password("password").roles("BUYER")
-//                .and()
-//                .withUser("username").password("password").roles("ADMIN");
-
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
-                .authoritiesByUsernameQuery("select user_name, authority from authority where user_name = ?");
+                .authoritiesByUsernameQuery("select user_name, authority from authority where (user_name = ? and authority = 'ROLE_BUYER')");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/administration","/administration/*","/administration/**").hasRole("ADMIN")
-                .antMatchers("/seller","/seller/*","/seller/**").hasRole("SELLER")
                 .antMatchers("/buyer","/buyer/*","/buyer/**").hasRole("BUYER")
-                .antMatchers("/","/database/**").permitAll()
                 .and().formLogin().loginPage("/signin")
-                .successHandler(successHandler)
+                .defaultSuccessUrl("/")
                 .and()
                 .logout()
                 .logoutUrl("/logout")

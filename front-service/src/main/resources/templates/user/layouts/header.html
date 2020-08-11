@@ -74,7 +74,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <span sec:authentication="name">John</span>
-                                    [<span sec:authorize="hasRole('ROLE_SELLER')"> seller </span><span sec:authorize="hasRole('ROLE_BUYER')"> buyer (<span th:text="${session.user_points}">0</span>) </span>]
+                                    [<span sec:authorize="hasRole('ROLE_SELLER')"> seller </span><span sec:authorize="hasRole('ROLE_BUYER')"> buyer</span>]
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
