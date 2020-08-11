@@ -7,6 +7,7 @@ import com.techriders.frontservice.services.OrderedProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class OrderedProductServiceImpl implements OrderedProductService {
 
@@ -17,4 +18,8 @@ public class OrderedProductServiceImpl implements OrderedProductService {
     public OrderedProduct findByProductId(Long id) {
         return orderedProductRepository.findByProductId(id);
     }
+    
+    public void receiveMessage(String message) {
+		System.out.println("Received at orderedProductServiceImpl - " + message);
+	}
 }
