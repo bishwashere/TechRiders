@@ -1,4 +1,4 @@
-package com.warehouseService.project;
+package com.techriders.frontservice.rabbitmq;
 
 import java.util.concurrent.CountDownLatch;
 import org.springframework.stereotype.Component;
