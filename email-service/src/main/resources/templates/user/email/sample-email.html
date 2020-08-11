@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Template for Sample Email </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<p th:text="#{greeting(${name})}"/>
+
+<H4> HI from Autocell!</H4>
+
+
+
+<br /><p>
+   This test message.
+</p>
+
+<p><br />
+    Thanks for your order, <br />
+    &emsp; <em><b>I'm the XYZ! - Online</b></em>
+</p>
+</body>
+</html>
