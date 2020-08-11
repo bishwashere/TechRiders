@@ -15,7 +15,7 @@ public class Content implements Serializable {
     //private static final long serialVersionUID = 3678107792576131001L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
     @NotNull

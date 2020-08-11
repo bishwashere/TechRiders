@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 @Entity
 public class ShippingAddress {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank

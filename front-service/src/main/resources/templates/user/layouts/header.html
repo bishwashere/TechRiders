@@ -90,13 +90,9 @@
                                 <a href="/login" th:href="@{/signin}"><span class="fa fa-sign-in"></span> <span>Sign in</span></a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-user"></span> <span >Join Us</span> <span class="caret"></span>
+                                <a href="#" th:href="@{/signup}">
+                                    <span class="fa fa-user"></span> <span >Signup</span>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" th:href="@{/signup}">Signup as Buyer</a></li>
-                                    <li><a href="#" th:href="@{/signup-seller}">Signup as Seller</a></li>
-                                </ul>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
