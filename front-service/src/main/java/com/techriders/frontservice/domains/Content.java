@@ -1,6 +1,7 @@
 package com.techriders.frontservice.domains;
 
 import com.sun.istack.NotNull;
+import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -14,6 +15,9 @@ public class Content implements Serializable {
     //private static final long serialVersionUID = 3678107792576131001L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Integer id;
+
     @NotNull
     private String slug;
 
