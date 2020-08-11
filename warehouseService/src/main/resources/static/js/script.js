@@ -84,7 +84,7 @@ $(function () {
     $("#sameBilling").on("click",function () {
         if($(this).is(":checked")){
             $.ajax({
-                url:"/buyer/address/shipping/get-billing",
+                url:"/account/address/shipping/get-billing",
                 dataType:"json",
                 type:"post",
                 contentType:"application/json",

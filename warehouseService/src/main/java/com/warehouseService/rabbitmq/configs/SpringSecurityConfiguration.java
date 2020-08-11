@@ -22,12 +22,10 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     DataSource dataSource;
 
-
     @Bean
     SimpleUrlAuthenticationFailureHandler authFailureHandler(){
         return new SimpleUrlAuthenticationFailureHandler();
     }
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -36,7 +34,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
                 .authoritiesByUsernameQuery("select user_name, authority from authority where( user_name = ? and (authority = 'ROLE_SELLER' OR authority = 'ROLE_ADMIN'))");
     }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -54,7 +51,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.headers().frameOptions().disable();
     }
-
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){

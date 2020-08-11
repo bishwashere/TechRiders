@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import java.util.*;
 
 @Controller
-@RequestMapping(value = "/buyer/payment_input")
+@RequestMapping(value = "/account/payment_input")
 public class PaymentController {
     @Autowired
     PaymentService paymentService;
@@ -132,7 +132,7 @@ public class PaymentController {
 
             paymentService.save(payment);
             redirectAttributes.addFlashAttribute(payment);
-            return "redirect:/buyer/payment_input/payment-success";
+            return "redirect:/account/payment_input/payment-success";
         }
 
     }
