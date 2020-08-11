@@ -49,7 +49,8 @@ public class WarehouseServiceApplication {
 //  }
 
   public static void main(String[] args) throws InterruptedException {
-    SpringApplication.run(WarehouseServiceApplication.class, args).close();
+//    SpringApplication.run(WarehouseServiceApplication.class, args).close();
+    SpringApplication.run(WarehouseServiceApplication.class, args);
   }
 
 }

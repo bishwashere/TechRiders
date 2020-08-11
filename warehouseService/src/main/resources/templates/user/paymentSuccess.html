@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/user/layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipping address Saved</title>
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container">
+        <!--/*@thymesVar id="payment" type=""*/-->
+<!--     <form th:object="${payment}" method="post">-->
+<!--            <fieldset>-->
+<!--                <legend>Your payments</legend>-->
+<!--                <ul>-->
+<!--                    <li th:each="paymd : ${allPaymentMethod}">-->
+<!--                        <input type="radio" th:field="*{payment}" th:value="${paymd}" name="Usethis"/>-->
+<!--                        <label th:for="${paymd.id}" th:text="Usethis"></label>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </fieldset>-->
+<!--        </form>-->
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">paymentType</th>
+                <th scope="col">cardName</th>
+                <th scope="col">cardNumber</th>
+                <th scope="col">cardExpiry</th>
+                <th scope="col">CVV</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pay, iterStat : ${allPaymentMethod}">
+                    <td scope="row" th:text="${iterStat.count}"></td>
+                    <td th:text="${pay.paymentType}"></td>
+                    <td th:text="${pay.cardName}"></td>
+                    <td th:text="${pay.cardNumber}"></td>
+                    <td th:text="${pay.cardExpiry}"></td>
+                    <td th:text="${pay.CVV}"></td>
+                    <td><a th:href="@{/buyer/payment_input/deletePayment/{id}(id=${pay.id})}">Delete</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+</div>
+</body>
+</html>
