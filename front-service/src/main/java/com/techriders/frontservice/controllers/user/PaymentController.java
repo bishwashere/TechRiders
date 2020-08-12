@@ -1,9 +1,11 @@
 package com.techriders.frontservice.controllers.user;
 
+import com.techriders.frontservice.FrontServiceApplication;
 import com.techriders.frontservice.configs.OrderStatusEnum;
 import com.techriders.frontservice.domains.*;
 import com.techriders.frontservice.helpers.MyHelper;
 import com.techriders.frontservice.services.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -22,6 +24,10 @@ import java.util.*;
 @Controller
 @RequestMapping(value = "/account/payment_input")
 public class PaymentController {
+
+	@Autowired
+	RabbitMQSender rabbitMQSender;
+	
     @Autowired
     PaymentService paymentService;
 
@@ -95,6 +101,9 @@ public class PaymentController {
 
             productOrder.setOrderedProducts(orderedProducts);
             productOrderService.save(productOrder);
+            
+            System.out.println("Sending to RabbitMQ: " + orderedProducts.toString());
+            rabbitMQSender.send(orderedProducts.toString());
 
             session.setAttribute("cart_item",null);
 
