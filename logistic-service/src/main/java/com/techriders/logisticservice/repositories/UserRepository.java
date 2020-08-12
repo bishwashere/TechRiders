@@ -2,6 +2,7 @@ package com.techriders.logisticservice.repositories;
 
 
 import com.techriders.logisticservice.domains.User;
+import com.techriders.logisticservice.domains.UserRole;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -25,4 +26,6 @@ public interface UserRepository extends CrudRepository<User,Long> {
 
 
     List<User>findTop10ByFirstNameContaining(String firstName);
+
+
 }

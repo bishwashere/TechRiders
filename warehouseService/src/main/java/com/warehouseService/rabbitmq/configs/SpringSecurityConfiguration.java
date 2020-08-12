@@ -43,16 +43,15 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authoritiesByUsernameQuery("select u.user_name, a.role_name  from user u,user_role a,user_user_roles ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_roles_id and (a.role_name = 'ROLE_SELLER' OR a.role_name = 'ROLE_ADMIN'))");
 
     }
-//com.warehouseService.rabbitmq
-//com.techriders.logisticservice
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
                 .antMatchers("/administration","/administration/*","/administration/**").hasAnyRole("ADMIN","SELLER")
                 .and().formLogin().loginPage("/")
-                .defaultSuccessUrl("/administration")
-//                .successHandler(authSuccessHandler)
+//                .defaultSuccessUrl("/administration")
+                .successHandler(authSuccessHandler)
                 .and()
                 .logout()
                 .logoutUrl("/logout")

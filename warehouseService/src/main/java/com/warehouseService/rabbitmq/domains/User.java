@@ -3,6 +3,8 @@ package com.warehouseService.rabbitmq.domains;
 
 import com.warehouseService.rabbitmq.annotations.EmailUnique;
 import com.warehouseService.rabbitmq.annotations.UserNameUnique;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;

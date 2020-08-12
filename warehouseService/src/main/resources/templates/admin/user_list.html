@@ -41,7 +41,7 @@
                     <td th:text="${count.index+1}"></td>
                     <td th:text="${user.firstName}"></td>
                     <td th:text="${user.lastName}">Description</td>
-                    <td th:text="${user.userGroups}">Description</td>
+                    <td th:text="${user.userRoles}">Description</td>
                     <td th:if="${user.adminVerification == 0}" class="action">
                         <a class="btn btn-xs btn-success accept-btn" th:data-id="${user.id}" th:href="@{/administration/users/edit/{id}(id=${user.id})}">Approve</a>
                         <a class="btn btn-xs btn-danger decline-btn" th:data-id="${user.id}" th:href="@{/administration/users/delete/{id}(id=${user.id})}">Decline</a>
