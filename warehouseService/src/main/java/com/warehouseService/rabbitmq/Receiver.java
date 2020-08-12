@@ -44,7 +44,7 @@ public class Receiver {
 //		productOrder.setOrderedProducts(orderedProducts);
 //		// Save.........
 		
-		System.out.println("Sent to e-mail");
+		System.out.println("Sent to e-mail service !!!");
 		rabbitMQSender.send(message);
 		latch.countDown();
 	}
