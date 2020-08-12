@@ -3,17 +3,13 @@ package com.techriders.frontservice.domains;
 
 import com.techriders.frontservice.annotations.EmailUnique;
 import com.techriders.frontservice.annotations.UserNameUnique;
-import com.techriders.frontservice.configs.RoleEnum;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -53,7 +49,7 @@ public class User implements Serializable {
 
     @ManyToMany
     @JoinTable
-    private List<Authority> authorities;
+    private List<UserRole> userRoles;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<ShippingAddress> shippingAddress;
@@ -136,12 +132,12 @@ public class User implements Serializable {
         this.points = points;
     }
 
-    public List<Authority> getAuthorities() {
-        return authorities;
+    public List<UserRole> getUserRoles() {
+        return userRoles;
     }
 
-    public void setAuthorities(List<Authority> authorities) {
-        this.authorities = authorities;
+    public void setUserRoles(List<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 
     public List<ShippingAddress> getShippingAddress() {

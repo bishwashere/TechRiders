@@ -21,33 +21,33 @@
                 <div th:if="${success_msg != null}">
                     <div class="alert alert-success" role="alert" th:text="${success_msg}">Error message</div>
                 </div>
-                <div class="form-group">
+                <div class="form-userRole">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control" id="firstName" th:field="*{firstName}" />
                     <p class="text-danger" th:errors="*{firstName}"></p>
                 </div>
-                <div class="form-group">
+                <div class="form-userRole">
                     <label for="lastName">Last Name</label>
                     <input type="text" class="form-control" id="lastName" th:field="*{lastName}" value="">
                     <p class="text-danger" th:errors="*{lastName}"></p>
                 </div>
 
-                <div class="form-group">
+                <div class="form-userRole">
                     <label for="email">Email</label>
                     <input type="text" class="form-control" id="email" th:field="*{email}" value="">
                     <p class="text-danger" th:errors="*{email}"></p>
                 </div>
-                <div class="form-group">
+                <div class="form-userRole">
                     <label for="userName">Username</label>
                     <input type="text" class="form-control" id="Username" th:field="*{userName}" value="">
                     <p class="text-danger" th:errors="*{userName}"></p>
                 </div>
-                <div class="form-group">
+                <div class="form-userRole">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" th:field="*{password}" value="">
                     <p class="text-danger" th:errors="*{password}"></p>
                 </div>
-                <div class="form-group">
+                <div class="form-userRole">
                     <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span> SignUp</button>
                 </div>
             </form>

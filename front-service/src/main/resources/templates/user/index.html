@@ -16,7 +16,7 @@
             <div th:each="product:${products}">
                 <a class="item-container" th:class="${(session.cart_item != null)?((session.cart_item.containsKey(product.id) == true )?'added item-container':'item-container'):'item-container'}" href="#" th:attr="data-key=${product.id}">
                     <div class="col-lg-3 col-md-3 col-sm-6">
-                        <div class="item-box form-group mt-15 col-xs-12 pb-15 pt-15">
+                        <div class="item-box form-userRole mt-15 col-xs-12 pb-15 pt-15">
                             <img th:src="@{/images/{product_image}(product_image=${product.productImage})}" class="img-responsive mt-15">
                             <p class="item-name" th:text="${product.name}"></p>
                             <p><span class="glyphicon glyphicon-heart-empty favourite-tag"></span><span class="price-tag">USD</span> <span class="price-tag" th:text="${product.price}">USD </span></p>

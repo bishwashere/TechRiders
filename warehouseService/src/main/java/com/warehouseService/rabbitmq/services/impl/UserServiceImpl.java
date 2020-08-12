@@ -1,5 +1,6 @@
 package com.warehouseService.rabbitmq.services.impl;
 
+
 import com.warehouseService.rabbitmq.domains.User;
 import com.warehouseService.rabbitmq.repositories.UserRepository;
 import com.warehouseService.rabbitmq.services.UserService;

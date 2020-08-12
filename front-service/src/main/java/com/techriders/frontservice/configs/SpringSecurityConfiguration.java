@@ -3,6 +3,7 @@ package com.techriders.frontservice.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -40,7 +41,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
-                .authoritiesByUsernameQuery("select u.user_name, a.authority from user u,authority a,user_authorities ua where (u.user_name = ? and ua.users_id = u.id and a.id = ua.authorities_id and a.authority = 'ROLE_BUYER')");
+                .authoritiesByUsernameQuery("select u.user_name, a.role_name from user u,user_role a,user_user_roles ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_roles_id and a.role_name = 'ROLE_BUYER')");
     }
 
     @Override
@@ -67,4 +68,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
 //        return NoOpPasswordEncoder.getInstance();
     }
+
+
 }

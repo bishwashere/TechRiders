@@ -2,6 +2,7 @@ package com.techriders.frontservice.services.impl;
 
 import com.techriders.frontservice.domains.User;
 import com.techriders.frontservice.repositories.UserRepository;
+import com.techriders.frontservice.services.UserRoleService;
 import com.techriders.frontservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

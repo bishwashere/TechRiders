@@ -1,9 +1,8 @@
 package com.techriders.frontservice.controllers.user;
 
-import com.techriders.frontservice.configs.RoleEnum;
-import com.techriders.frontservice.domains.Authority;
+import com.techriders.frontservice.domains.UserRole;
 import com.techriders.frontservice.domains.User;
-import com.techriders.frontservice.services.AuthorityService;
+import com.techriders.frontservice.services.UserRoleService;
 import com.techriders.frontservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -26,7 +25,7 @@ public class SignUpController {
     UserService userService;
 
     @Autowired
-    AuthorityService authorityService;
+    UserRoleService userRoleService;
 
     @GetMapping(value = "/signup")
     public String signupForm(@ModelAttribute("user") User user, Model model){
@@ -42,12 +41,12 @@ public class SignUpController {
         }else{
 
 
-            Authority authority = authorityService.findByAuthorityId("ROLE_BUYER");
+            UserRole userRole = userRoleService.findByRoleName("ROLE_BUYER");
 
-            List<Authority> authorities = new ArrayList<Authority>();
-            authorities.add(authority);
+            List<UserRole> userRoles = new ArrayList<UserRole>();
+            userRoles.add(userRole);
 
-            user.setAuthorities(authorities);
+            user.setUserRoles(userRoles);
 
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             user.setPassword(encoder.encode(user.getPassword()));

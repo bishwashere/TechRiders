@@ -1,6 +1,5 @@
 package com.techriders.frontservice.controllers.user;
 
-import com.techriders.frontservice.FrontServiceApplication;
 import com.techriders.frontservice.configs.OrderStatusEnum;
 import com.techriders.frontservice.domains.*;
 import com.techriders.frontservice.helpers.MyHelper;
