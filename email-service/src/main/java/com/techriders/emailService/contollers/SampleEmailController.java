@@ -12,6 +12,10 @@ import javax.mail.MessagingException;
 import java.io.IOException;
 import java.util.Locale;
 
+
+//SAMPLE IT IS NEVER USED USED
+
+
 @Controller
 public class SampleEmailController {
     @Autowired
