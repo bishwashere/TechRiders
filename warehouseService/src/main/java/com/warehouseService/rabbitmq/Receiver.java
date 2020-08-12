@@ -33,13 +33,13 @@ public class Receiver {
 
 		System.out.println("Received <" + message + ">");
 		
-		OrderedProduct orderedProduct = new OrderedProduct(message);
-		List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
-		orderedProducts.add(orderedProduct);
-		ProductOrder productOrder = new ProductOrder(message);
-		productOrder.setOrderedProducts(orderedProducts);
-		// Save.........
-        System.out.println("Saved");
+//		OrderedProduct orderedProduct = new OrderedProduct(message);
+//		List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
+//		orderedProducts.add(orderedProduct);
+//		ProductOrder productOrder = new ProductOrder(message);
+//		productOrder.setOrderedProducts(orderedProducts);
+//		// Save.........
+//      System.out.println("Saved");
 
 		latch.countDown();
 	}

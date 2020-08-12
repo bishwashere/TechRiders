@@ -42,22 +42,22 @@ public class ProductOrder {
     public ProductOrder() {
     }
     
-    @Autowired
-    UserService userService;
-    
-    @Autowired
-    BillingAddressService billingAddressService;
+//    @Autowired
+//    UserService userService;
+//    
+//    @Autowired
+//    BillingAddressService billingAddressService;
 
-    public ProductOrder(String message) throws JsonMappingException, JsonProcessingException {
-    	ObjectMapper mapper = new ObjectMapper();
-	    JsonNode actualObj = mapper.readTree(message);
-	    this.transactionId=actualObj.get("transactionId").asLong();
-	    this.buyer= userService.findById(actualObj.get("buyer").asInt());
-	    this.billingAddress=billingAddressService.findById(actualObj.get("billingAddress").asInt());
-//	    String orderStatus = actualObj.get("orderStatus").textValue();
-//	    this.orderStatus=OrderStatusEnum.orderStatus
-	    this.orderStatus=OrderStatusEnum.PENDING;
-	}
+//    public ProductOrder(String message) throws JsonMappingException, JsonProcessingException {
+//    	ObjectMapper mapper = new ObjectMapper();
+//	    JsonNode actualObj = mapper.readTree(message);
+//	    this.transactionId=actualObj.get("transactionId").asLong();
+//	    this.buyer= userService.findById(actualObj.get("buyer").asInt());
+//	    this.billingAddress=billingAddressService.findById(actualObj.get("billingAddress").asInt());
+////	    String orderStatus = actualObj.get("orderStatus").textValue();
+////	    this.orderStatus=OrderStatusEnum.orderStatus
+//	    this.orderStatus=OrderStatusEnum.PENDING;
+//	}
 
 	public Long getId() {
         return id;
