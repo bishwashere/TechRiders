@@ -1,0 +1,118 @@
+<<<<<<< HEAD
+package com.techriders.logisticservice.controllers.admin;
+
+
+=======
+<<<<<<< HEAD:front-service/src/main/java/com/techriders/frontservice/controllers/user/OrderController.java
+package com.techriders.frontservice.controllers.user;
+=======
+package com.techriders.logisticservice.controllers.admin;
+
+
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed:logistic-service/src/main/java/com/techriders/logisticservice/controllers/admin/AdminOrderController.java
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed
+
+import com.techriders.logisticservice.configs.OrderStatusEnum;
+import com.techriders.logisticservice.configs.RoleEnum;
+import com.techriders.logisticservice.domains.ProductOrder;
+import com.techriders.logisticservice.services.ProductOrderService;
+import com.techriders.logisticservice.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+<<<<<<< HEAD
+
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
+
+import java.util.List;
+
+@RequestMapping({"/admin/account","/seller/account","/buyer/account"})
+@Controller
+public class AdminOrderController {
+=======
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
+import java.util.List;
+
+@RequestMapping(value = "/account")
+@Controller
+public class OrderController {
+
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed
+    @Autowired
+    ProductOrderService productOrderService;
+    @Autowired
+    ProductService productService;
+
+<<<<<<< HEAD
+    @RequestMapping(value = {"order-list"})
+=======
+    @RequestMapping(value = {"/order-list"})
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed
+    public String getSellerOrders(Model model){
+        List<ProductOrder> productOrders= productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+        return "user/orderForm";
+    }
+
+    @RequestMapping(value = {"/order-history"})
+    public String getOrderHistory(Model model){
+        List<ProductOrder> productOrders= productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+        return "user/orderHistory";
+    }
+    @RequestMapping(value = {"","/"})
+    public String getOrders(Model model){
+<<<<<<< HEAD
+       List<ProductOrder> productOrders= productOrderService.getAll();
+       model.addAttribute("productOrders",productOrders);
+=======
+        List<ProductOrder> productOrders= productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed
+        return "admin/orderForm";
+    }
+    @PostMapping(value = "/save")
+
+    public String save(@ModelAttribute("order")ProductOrder productOrder, @RequestParam("order-status") String stat, @RequestParam("id")Long id, Model model, HttpSession session){
+        productOrderService.get(id).setOrderStatus(OrderStatusEnum.valueOf(stat));
+
+        productOrderService.save(productOrderService.get(id));
+        model.addAttribute("productOrders",productOrderService.getAll());
+        ProductOrder productOrder1 = productOrderService.get(id);
+        session.setAttribute("productOrder1",productOrder1);
+        return "admin/orderForm";
+    }
+    @GetMapping(value = "/delete/{id}")
+    public String delete(@PathVariable("id")Long id, Model model){
+        productOrderService.deleteById(id);
+        model.addAttribute("productOrders",productOrderService.getAll());
+        return "admin/orderForm";
+    }
+
+    @GetMapping(value = "/edit/{id}")
+    public String editOrder(@ModelAttribute("productOrder")ProductOrder productOrder,@PathVariable("id")Long id, Model model){
+        model.addAttribute("status", RoleEnum.values());
+        return "admin/editOrderForm";
+    }
+
+    @RequestMapping(value = {"/history"})
+    public String getHistory(Model model){
+        List<ProductOrder> productOrders= productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+        return "admin/history";
+    }
+    @RequestMapping(value = {"/user/delete/{id}"})
+    public String deleteFromUser(@PathVariable("id")Long id, Model model){
+        ProductOrder productOrder=productOrderService.get(id);
+        if(!(productOrder.getOrderStatus().equals("On the way")||productOrder.getOrderStatus().equals("Delivered"))){
+            productOrderService.deleteById(id);
+        }
+        List<ProductOrder> productOrders= productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+        return "admin/history";
+    }
+}
