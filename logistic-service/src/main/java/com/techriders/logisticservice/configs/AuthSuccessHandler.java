@@ -1,12 +1,13 @@
 package com.techriders.logisticservice.configs;
 
-
-import com.techriders.logisticservice.domains.User;
 import com.techriders.logisticservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
@@ -15,7 +16,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.security.Permission;
+import java.security.Principal;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Configuration
 public class AuthSuccessHandler implements AuthenticationSuccessHandler {
@@ -29,17 +35,29 @@ public class AuthSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-        Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
 
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        User user = userService.findByUserName(userDetails.getUsername());
+        Set<SimpleGrantedAuthority> authList = new HashSet<SimpleGrantedAuthority>();
 
-        httpServletRequest.getSession().setAttribute("user_points",user.getPoints());
+//
+//        Set<SimpleGrantedAuthority> authList = new HashSet<SimpleGrantedAuthority>();
+//
+//        authentication.getAuthorities().addAll(authList);
 
-        if (roles.contains("ROLE_ADMIN")) {
-            httpServletResponse.sendRedirect("/administration");
-        } else {
-            httpServletResponse.sendRedirect("/");
-        }
+//        Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
+//
+//        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+//
+//
+//        System.out.println(authentication.getAuthorities()+"jkkjhjghjkjgfjkjgjkhjg");
+//
+////        authentication.getAuthorities().add(authority);
+//
+//
+//        if (roles.contains("ROLE_ADMIN")) {
+//            httpServletResponse.sendRedirect("/administration");
+//        } else {
+//            httpServletResponse.sendRedirect("/");
+//        }
     }
 }

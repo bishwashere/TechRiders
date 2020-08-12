@@ -1,7 +1,6 @@
 package com.techriders.logisticservice.services.impl;
 
 import com.techriders.logisticservice.domains.Product;
-
 import com.techriders.logisticservice.repositories.ProductRepository;
 import com.techriders.logisticservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

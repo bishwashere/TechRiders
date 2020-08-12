@@ -1,7 +1,6 @@
 package com.techriders.instorepickupservice.controllers.admin;
 
 
-
 import com.techriders.instorepickupservice.configs.OrderStatusEnum;
 import com.techriders.instorepickupservice.configs.RoleEnum;
 import com.techriders.instorepickupservice.domains.ProductOrder;
@@ -10,11 +9,9 @@ import com.techriders.instorepickupservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-
 import java.util.List;
 
 @RequestMapping({"/admin/account","/seller/account","/buyer/account"})

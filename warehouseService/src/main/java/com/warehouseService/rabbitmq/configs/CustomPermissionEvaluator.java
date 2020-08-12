@@ -11,9 +11,11 @@ import java.io.Serializable;
 public class CustomPermissionEvaluator implements PermissionEvaluator {
 
 
+
     @Override
     public boolean hasPermission(Authentication authentication, Object o, Object o1) {
         System.out.println("hhhh------------------------"+o1);
+//        return authentication.getAuthorities().contains(o1);
         return true;
     }
 

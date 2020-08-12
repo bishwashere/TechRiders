@@ -1,13 +1,14 @@
 package com.techriders.instorepickupservice.services.impl;
 
+
 import com.techriders.instorepickupservice.domains.User;
 import com.techriders.instorepickupservice.repositories.UserRepository;
 import com.techriders.instorepickupservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 

@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class BillingAddress {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     @NotBlank
