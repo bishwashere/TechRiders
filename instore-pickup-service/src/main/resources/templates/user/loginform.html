@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{user/layouts/layout}"
 >
 <head>
     <title>TechRiders SignIn</title>
     <!--    <link rel="stylesheet" >-->
+    <link rel="stylesheet" href="" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" href="" th:href="@{/font-awesome/css/font-awesome.css}"/>
 </head>
 <body>
-<div id="main-content" layout:fragment="main-content">
+<div id="main-content" >
     <div class="container content p-15">
-        <div class="mt-80 mb-120 row">
-            <form class="col-md-offset-4 col-md-4" method="post">
+        <div class="mt-80 mb-120 row" style="margin-top: 100px">
+            <form class="col-md-offset-4 col-md-4" action="/" method="post">
+                <div class="col-sm-6 col-sm-offset-3"><a href="/"><img class="img-responsive" th:src="@{/images/logo.jpg}"></a></div><h3>Tech Riders</h3><br>
                 <h3>Login form</h3>
                 <p>Login with username and password only.</p>
                 <div th:if="${param.error}">
