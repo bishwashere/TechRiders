@@ -79,7 +79,6 @@ public class PaymentController {
             productOrder.setOrderStatus(OrderStatusEnum.PENDING);
             productOrder.setBuyer(user);
 
-
             //collecting product
             List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
             List<Long> ids = new ArrayList<Long>();
@@ -98,9 +97,9 @@ public class PaymentController {
 
             productOrder.setOrderedProducts(orderedProducts);
             productOrderService.save(productOrder);
-            
-            System.out.println("Sending to RabbitMQ: " + orderedProducts.toString());
-            rabbitMQSender.send(orderedProducts.toString());
+
+            System.out.println("Sending to RabbitMQ: " + productOrder.toString());
+            rabbitMQSender.send(productOrder.toString());
 
             session.setAttribute("cart_item",null);
 

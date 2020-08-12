@@ -5,6 +5,13 @@ import javax.persistence.*;
 import javax.transaction.Transactional;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+
 import java.io.Serializable;
 
 @Entity
@@ -29,13 +36,34 @@ public class OrderedProduct implements Serializable {
     @JoinColumn(name="product_id",nullable = false)
     private Product product;
 
-
-
     public OrderedProduct() {
 
     }
 
-    public Long getId() {
+//    public OrderedProduct(String price, String quantity, String tax) {
+//    	this.price = Float.parseFloat(price);
+//    	this.qty = Integer.parseInt(quantity);
+//    	this.tax = Float.parseFloat(tax);
+//    }
+
+//    public OrderedProduct(String message) throws JsonMappingException, JsonProcessingException {
+//    	System.out.println("Inside OrderedProduct 1");
+//    	ObjectMapper mapper = new ObjectMapper();
+//	    JsonNode actualObj = mapper.readTree(message);
+//    	
+//	    System.out.println("Inside OrderedProduct 2");
+//	    Gson gson = new Gson();
+//	    JsonNode OrderedProductJson = actualObj.get("orderedProducts");
+//		System.out.println("Inside OrderedProduct 3");
+//
+//		this.price = Double.valueOf(OrderedProductJson.get("price").asDouble()).floatValue();
+//		System.out.println("Inside OrderedProduct 3");
+//		this.qty = actualObj.get("quantity").get("price").asInt();
+//		this.tax = Double.valueOf(actualObj.get("orderedProducts").get("tax").asDouble()).floatValue();
+//		System.out.println("Inside OrderedProduct 4");
+//	}
+
+	public Long getId() {
         return id;
     }
 

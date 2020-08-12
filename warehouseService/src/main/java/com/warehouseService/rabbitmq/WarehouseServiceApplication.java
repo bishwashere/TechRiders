@@ -16,9 +16,9 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WarehouseServiceApplication {
 
-  static final String topicExchangeName = "warehouse-service-exchange";
+  public static final String topicExchangeName = "warehouse-exchange";  
 
-  static final String queueName = "warehouse-service";
+  static final String queueName = "order-queue";
 
   @Bean
   Queue queue() {
@@ -35,20 +35,20 @@ public class WarehouseServiceApplication {
     return BindingBuilder.bind(queue).to(exchange).with("foo.bar.#");
   }
 
-//  @Bean
-//  SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
-//      MessageListenerAdapter listenerAdapter) {
-//    SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-//    container.setConnectionFactory(connectionFactory);
-//    container.setQueueNames(queueName);
-//    container.setMessageListener(listenerAdapter);
-//    return container;
-//  }
+  @Bean
+  SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
+      MessageListenerAdapter listenerAdapter) {
+    SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+    container.setConnectionFactory(connectionFactory);
+    container.setQueueNames(queueName);
+    container.setMessageListener(listenerAdapter);
+    return container;
+  }
 
-//  @Bean
-//  MessageListenerAdapter listenerAdapter(Receiver receiver) {
-//    return new MessageListenerAdapter(receiver, "receiveMessage");
-//  }
+  @Bean
+  MessageListenerAdapter listenerAdapter(Receiver receiver) {
+    return new MessageListenerAdapter(receiver, "receiveMessage");
+  }
 
   public static void main(String[] args) throws InterruptedException {
 //    SpringApplication.run(WarehouseServiceApplication.class, args).close();
