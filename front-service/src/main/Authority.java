@@ -5,7 +5,6 @@ import com.techriders.frontservice.configs.RoleEnum;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 public class Authority implements Serializable {
@@ -18,10 +17,24 @@ public class Authority implements Serializable {
     @Size(max = 12)
     private String authority;
 
-    @ManyToMany(mappedBy = "authorities")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_name", referencedColumnName = "userName")
+    private User user;
 
     public Authority() {
+    }
+    public Authority(User user, RoleEnum authority) {
+        this.user = user;
+
+        if(authority.equals(RoleEnum.ROLE_ADMIN)){
+            this.authority = "ROLE_ADMIN";
+        }else if(authority.equals(RoleEnum.ROLE_SELLER)){
+
+            this.authority = "ROLE_SELLER";
+        }else{
+
+            this.authority = "ROLE_BUYER";
+        }
     }
 
     public Long getId() {
@@ -40,11 +53,14 @@ public class Authority implements Serializable {
         this.authority = authority;
     }
 
-    public List<User> getUsers() {
-        return users;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public String toString(){
+        return authority;
     }
 }

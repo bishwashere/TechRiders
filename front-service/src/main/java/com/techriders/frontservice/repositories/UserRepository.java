@@ -2,16 +2,11 @@ package com.techriders.frontservice.repositories;
 
 
 import com.techriders.frontservice.domains.User;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.CrudRepositoryExtensionsKt;
-import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 @Repository

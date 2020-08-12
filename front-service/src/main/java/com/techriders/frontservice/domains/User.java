@@ -51,7 +51,8 @@ public class User implements Serializable {
 
     private Long points = 0l;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
+    @ManyToMany
+    @JoinTable
     private List<Authority> authorities;
 
     @OneToMany(cascade = CascadeType.ALL)
@@ -63,42 +64,12 @@ public class User implements Serializable {
     @OneToMany(cascade = CascadeType.ALL)
     private List<BillingAddress> billingAddress;
 
-    public User() {
-        authorities = new ArrayList<Authority>();
-    }
-
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-
-        this.password = password;
-
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getFirstName() {
@@ -117,6 +88,30 @@ public class User implements Serializable {
         this.lastName = lastName;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public Short getAdminVerification() {
         return adminVerification;
     }
@@ -133,12 +128,20 @@ public class User implements Serializable {
         this.userStatus = userStatus;
     }
 
+    public Long getPoints() {
+        return points;
+    }
+
+    public void setPoints(Long points) {
+        this.points = points;
+    }
+
     public List<Authority> getAuthorities() {
         return authorities;
     }
 
-    public void setAuthorities(RoleEnum roleEnum) {
-        this.authorities.add(new Authority(this,roleEnum));
+    public void setAuthorities(List<Authority> authorities) {
+        this.authorities = authorities;
     }
 
     public List<ShippingAddress> getShippingAddress() {
@@ -163,17 +166,5 @@ public class User implements Serializable {
 
     public void setBillingAddress(List<BillingAddress> billingAddress) {
         this.billingAddress = billingAddress;
-    }
-
-    public Long getPoints() {
-        return points;
-    }
-
-    public void setPoints(Long points) {
-        this.points = points;
-    }
-
-    public void setAuthorities(List<Authority> authorities) {
-        this.authorities = authorities;
     }
 }
