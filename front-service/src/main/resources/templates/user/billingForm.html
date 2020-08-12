@@ -27,13 +27,13 @@
                     <p th:errors="*{lastName}" class="text-danger"></p>
                 </div>
             </div>
-            <div class="form-userGroup">
+            <div class="form-userRole">
                 <label for="addressL1">Country/Region</label>
                 <input th:field="*{addressL1}" placeholder="Street Adress, PoBox, company name, c/o"
                        class="form-control" id="addressL1" aria-describedby="addressL1Help">
                 <p th:errors="*{addressL1}" class="text-danger"></p>
             </div>
-            <div class="form-userGroup">
+            <div class="form-userRole">
                 <label for="addressL2">Address line 2</label>
                 <input th:field="*{addressL2}" class="form-control" id="addressL2" aria-describedby="addressL2Help"
                        placeholder="Appartment, building, suite, unit, floor, etc">
@@ -66,14 +66,14 @@
                     <p th:errors="*{zipCode}" class="text-danger"></p>
                 </div>
             </div>
-            <div class="form-userGroup">
+            <div class="form-userRole">
                 <label for="phoneNumber">Phone Number</label>
                 <input th:field="*{phoneNumber}" class="form-control" id="phoneNumber"
                        aria-describedby="phoneNumberHelp" placeholder="Enter Phone number">
                 <p th:errors="*{phoneNumber}" class="text-danger"></p>
                 <small id="phoneHelp" class="form-text text-muted">May be used to assist delivery</small>
             </div>
-            <div class="form-userGroup">
+            <div class="form-userRole">
                 <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Save and Continue</button>
 
             </div>

@@ -41,7 +41,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
-                .authoritiesByUsernameQuery("select u.user_name, a.group_name from user u,user_group a,user_user_groups ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_groups_id and a.group_name = 'ROLE_BUYER')");
+                .authoritiesByUsernameQuery("select u.user_name, a.role_name from user u,user_role a,user_user_roles ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_roles_id and a.role_name = 'ROLE_BUYER')");
     }
 
     @Override

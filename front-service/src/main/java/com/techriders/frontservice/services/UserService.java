@@ -1,6 +1,5 @@
 package com.techriders.frontservice.services;
 
-
 import com.techriders.frontservice.domains.User;
 
 import java.util.List;

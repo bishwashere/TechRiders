@@ -49,7 +49,7 @@ public class User implements Serializable {
 
     @ManyToMany
     @JoinTable
-    private List<UserGroup> userGroups;
+    private List<UserRole> userRoles;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<ShippingAddress> shippingAddress;
@@ -132,12 +132,12 @@ public class User implements Serializable {
         this.points = points;
     }
 
-    public List<UserGroup> getUserGroups() {
-        return userGroups;
+    public List<UserRole> getUserRoles() {
+        return userRoles;
     }
 
-    public void setUserGroups(List<UserGroup> userGroups) {
-        this.userGroups = userGroups;
+    public void setUserRoles(List<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 
     public List<ShippingAddress> getShippingAddress() {

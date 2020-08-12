@@ -1,12 +1,11 @@
 package com.warehouseService.rabbitmq.domains;
-
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class UserGroup implements Serializable {
+public class UserRole implements Serializable {
 
 
     @Id
@@ -14,15 +13,19 @@ public class UserGroup implements Serializable {
     private Integer id;
 
     @Size(max = 12)
-    private String groupName;
+    private String roleName;
 
-    @ManyToMany(mappedBy = "userGroups")
+    @ManyToMany(mappedBy = "userRoles")
     private List<User> users;
 
+    @ManyToMany
+    @JoinTable
+    private List<RolePermission> rolePermissions;
+
     public String toString(){
-        return groupName;
+        return roleName;
     }
-    public UserGroup() {
+    public UserRole() {
     }
 
     public Integer getId() {
@@ -33,12 +36,12 @@ public class UserGroup implements Serializable {
         this.id = id;
     }
 
-    public String getGroupName() {
-        return groupName;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
     public List<User> getUsers() {
@@ -49,5 +52,11 @@ public class UserGroup implements Serializable {
         this.users = users;
     }
 
+    public List<RolePermission> getRolePermissions() {
+        return rolePermissions;
+    }
 
+    public void setRolePermissions(List<RolePermission> rolePermissions) {
+        this.rolePermissions = rolePermissions;
+    }
 }
