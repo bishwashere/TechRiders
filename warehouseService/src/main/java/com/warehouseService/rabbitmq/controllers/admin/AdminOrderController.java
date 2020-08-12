@@ -22,8 +22,11 @@ public class AdminOrderController {
     @Autowired
     ProductService productService;
 
-//    @RequestMapping(value ="/order-list/{status}", method = RequestMethod.GET)
-//    public String getOrdersByStatus(@PathVariable("status") String status, Model model){
-//        return ""
-//    }
+    @GetMapping(value ="/order-list/{status}")
+    public String getOrdersByStatus(@PathVariable("status") String status, Model model){
+
+        List<ProductOrder> productOrders = productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+        return "admin/orderList";
+    }
 }
