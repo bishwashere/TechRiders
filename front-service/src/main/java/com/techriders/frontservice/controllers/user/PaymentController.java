@@ -97,7 +97,7 @@ public class PaymentController {
 
             productOrder.setOrderedProducts(orderedProducts);
             productOrderService.save(productOrder);
-            
+
             System.out.println("Sending to RabbitMQ: " + productOrder.toString());
             rabbitMQSender.send(productOrder.toString());
 

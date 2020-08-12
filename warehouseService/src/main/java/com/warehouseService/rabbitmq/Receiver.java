@@ -20,19 +20,25 @@ import com.google.gson.reflect.TypeToken;
 import com.warehouseService.rabbitmq.services.*;
 import com.warehouseService.rabbitmq.domains.*;
 
+import java.util.concurrent.TimeUnit;
+
 
 @Component
 public class Receiver {
-
+	
 	@Autowired
-    ProductOrderService productOrderService;
+	RabbitMQSender rabbitMQSender;
 		
 	private CountDownLatch latch = new CountDownLatch(1);
 
-	public void receiveMessage(String message) throws JsonMappingException, JsonProcessingException {
+	public void receiveMessage(String message) throws JsonMappingException, JsonProcessingException, InterruptedException {
 
 		System.out.println("Received <" + message + ">");
-		
+
+		TimeUnit.SECONDS.sleep(10);
+
+		rabbitMQSender.send(message);
+
 //		OrderedProduct orderedProduct = new OrderedProduct(message);
 //		List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
 //		orderedProducts.add(orderedProduct);
