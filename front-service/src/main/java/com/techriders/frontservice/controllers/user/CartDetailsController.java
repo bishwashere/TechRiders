@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @Controller
 public class CartDetailsController {
 
-    @GetMapping("/buyer/cart-details")
+    @GetMapping("/account/cart-details")
     public String cartDetails(HttpSession session, Model model, HttpServletRequest request) {
         HashMap<Long, Product> cartItems = (HashMap<Long, Product>) session.getAttribute("cart_item");
 

@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import java.util.*;
 
 @Controller
-@RequestMapping(value = "/buyer/payment_input")
+@RequestMapping(value = "/account/payment_input")
 public class PaymentController {
     @Autowired
     PaymentService paymentService;
@@ -50,6 +50,7 @@ public class PaymentController {
 
     @PostMapping(value = {"/", ""})
     public String savePayment(@Valid @ModelAttribute("payment") Payment payment, BindingResult result, Model model, HttpSession session, RedirectAttributes redirectAttributes) {
+
         if (result.hasErrors()) {
             return "/user/paymentForm";
         } else {
@@ -76,10 +77,6 @@ public class PaymentController {
             productOrder.setBuyer(user);
 
 
-            //message is remaining
-
-            Long points = 5l;
-
             //collecting product
             List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
             List<Long> ids = new ArrayList<Long>();
@@ -99,16 +96,11 @@ public class PaymentController {
             productOrder.setOrderedProducts(orderedProducts);
             productOrderService.save(productOrder);
 
-
-            userService.addPointsById(user.getId(),points);//adding 5 points to
-
-            session.setAttribute("user_points",user.getPoints()+points);
-
             session.setAttribute("cart_item",null);
 
             paymentService.save(payment);
             redirectAttributes.addFlashAttribute(payment);
-            return "redirect:/buyer/payment_input/payment-success";
+            return "redirect:/account/payment_input/payment-success";
         }
 
     }
