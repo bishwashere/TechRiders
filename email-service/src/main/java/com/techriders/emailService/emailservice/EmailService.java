@@ -32,8 +32,8 @@ public class EmailService {
 
     public void sendEmail(final String recipientName, final String recipientEmail, final Locale locale) throws MessagingException {
         // Prepare the Thymeleaf evaluation context
-        final Context thymeContext = new Context(locale);
-        thymeContext.setVariable("name", recipientName);
+        final Context context = new Context(locale);
+        context.setVariable("name", recipientName);
 
         // Prepare message using a Spring helper
         final MimeMessage mimeMessage = this.mailSender.createMimeMessage();
@@ -43,8 +43,8 @@ public class EmailService {
         // could have CC, BCC, will also take an array of Strings
         message.setTo(recipientEmail);
 
-        // Create the HTML body using Thymeleaf..template is orderReceivedMail.html
-        final String htmlContent = this.templateEngine.process("user/email/sample-email", thymeContext);
+        // Create the HTML body using Thymeleaf..template is sample.html
+        final String htmlContent = this.templateEngine.process("user/email/sample-email", context);
         message.setText(htmlContent, true /* isHtml */);
 
 
