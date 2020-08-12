@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class FollowerController {
 
-    @RequestMapping("/account/followers")
+    @RequestMapping("/buyer/followers")
     public String followers(){
 
         return "user/followers";

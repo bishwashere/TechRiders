@@ -5,7 +5,7 @@ $(function () {
 
         $(`.item-container[data-key="${key}"] .check-icon`).addClass('fa fa-spinner fa-spin');
         $.ajax({
-            url: "/account/add-to-cart",
+            url: "/buyer/add-to-cart",
             type: "post",
             data: {
                 id: key,
@@ -66,7 +66,7 @@ $(function () {
         var key = $(this).parents('.item-container').attr('data-key');
         var ele = $(this);
         $.ajax({
-            url: "/account/remove-item",
+            url: "/buyer/remove-item",
             type: "post",
             data: {
                 id: key
@@ -84,7 +84,7 @@ $(function () {
     $("#sameBilling").on("click",function () {
         if($(this).is(":checked")){
             $.ajax({
-                url:"/account/address/shipping/get-billing",
+                url:"/buyer/address/shipping/get-billing",
                 dataType:"json",
                 type:"post",
                 contentType:"application/json",

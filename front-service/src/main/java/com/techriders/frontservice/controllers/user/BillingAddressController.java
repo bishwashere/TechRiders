@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "/account/address")
+@RequestMapping(value = "/buyer/address")
 public class BillingAddressController {
     @Autowired
     BillingAddressService billingAddressService;
@@ -27,7 +27,7 @@ public class BillingAddressController {
     public String billingAddressForm(@ModelAttribute("billingAddress") BillingAddress billingAddr,HttpSession session,RedirectAttributes redirectAttributes){
         if(session.getAttribute("cart_item") == null){
             redirectAttributes.addFlashAttribute("error_msg","Cart is empty.");
-            return "redirect:/account/cart-details";
+            return "redirect:/buyer/cart-details";
         }
         return "user/billingForm";
     }
@@ -43,7 +43,7 @@ public class BillingAddressController {
 //        user.setBillingAddress(billingAdres);
 //        userService.saveBillingAddressByID(billing.getId());
 //            redirectAttributes.addFlashAttribute(billingAddr);
-            return "redirect:/account/address/shipping";
+            return "redirect:/buyer/address/shipping";
         }
 
     }

@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/account")
+@RequestMapping(value = "/buyer")
 //@SessionAttributes(value = "{cart_item,cart_size}")
 public class CartControllerRest {
     @Autowired

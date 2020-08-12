@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 
 
-@RequestMapping("/account/account")
+@RequestMapping("/buyer/account")
 @Controller
 public class UserOrderController {
     @Autowired
