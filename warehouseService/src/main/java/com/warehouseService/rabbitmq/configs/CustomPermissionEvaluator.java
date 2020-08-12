@@ -30,9 +30,7 @@ public class CustomPermissionEvaluator implements PermissionEvaluator {
 
         while (roleValues.hasNext()){
             String roleName = (String) roleValues.next();
-
             if(sessionRoles.containsKey(roleName)){
-
                 List<String> permission = (ArrayList<String>)sessionRoles.get(roleName);
                 System.out.println(o1);
                 if(permission.contains(o1)){
