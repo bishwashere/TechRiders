@@ -93,11 +93,18 @@ public class ProductOrder {
     
     @Override
 	public String toString() {
+    	// email
+    	// Username
+    	// transaction ID
+    	// price
+    	// quantity
+    	// tax
 		return "{" +
 	        "\"transactionId\":\"" + transactionId + "\"" +
-	        ", \"buyer\":\"" + buyer.getId() + "\"" +
-	        ", \"billingAddress\":\"" + billingAddress.getId() + "\"" +
-	        ", \"shippingAddress\":\"" + shippingAddress.getId() + "\"" +
+	        ", \"email\":\"" + buyer.getEmail() + "\"" +
+	        ", \"name\":\"" + buyer.getUserName() + "\"" +
+	        ", \"billingAddress\":\"" + billingAddress.getAddressL1() + "\"" +
+	        ", \"shippingAddress\":\"" + shippingAddress.getAddressL1() + "\"" +
 	        ", \"orderStatus\":\"" + orderStatus + "\"" +
 	        ", \"orderedProducts\":\"" + orderedProducts.toString() + "\"" +
         "}";

@@ -13,8 +13,8 @@ public class TestRunner implements CommandLineRunner {
 
     @Override
     public void run(String...args) throws Exception {
-        emailService.sendEmail("Pradip", "youracharya@gmail.com",new Locale("en"));
-        System.out.println("                  The Email is on the WAY!!!");
+        //emailService.sendEmail("Pradip", "youracharya@gmail.com",new Locale("en"));
+        //System.out.println("The Email is on the WAY!!!");
 
     }
 }

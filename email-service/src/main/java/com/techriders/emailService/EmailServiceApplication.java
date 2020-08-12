@@ -15,9 +15,9 @@ import javax.mail.MessagingException;
 
 @SpringBootApplication
 public class EmailServiceApplication {
-    static final String topicExchangeName = "order-exchange";
+    static final String topicExchangeName = "email-exchange";
 
-    static final String queueName = "order-queue";
+    static final String queueName = "email-queue";
 
     @Bean
     Queue queue() {

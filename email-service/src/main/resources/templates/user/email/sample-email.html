@@ -6,14 +6,18 @@
 </head>
 <body>
 <p th:text="#{greeting(${name})}"/>
-<H4> Hi from Autocell!</H4>
+<H4> Your Order Details at AutoSell!</H4>
+<p th:text="#{transaction(${transactionId})}"/><br/>
+<p th:text="#{shippingaddress(${shippingAddress})}"/><br/>
+<p th:text="#{billingaddress(${billingAddress})}"/><br/>
+
 <br/><p>
+
    This is test message.
 </p>
-
 <p><br/>
-    Thanks for your support, <br/>
-    &emsp; <em><b>I'm the XYZ! - Online</b></em>
+    Thanks for your order, Keep in touch <br/>
+    &emsp; <em><b>TechRiders: Smells like Team Spirit</b></em>
 </p>
 </body>
 </html>

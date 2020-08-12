@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.util.Locale;
@@ -30,10 +35,27 @@ public class EmailService {
      * Send HTML mail
      */
 
-    public void sendEmail(final String recipientName, final String recipientEmail, final Locale locale) throws MessagingException {
+    public void sendEmail(String messageJSON) throws MessagingException, JsonMappingException, JsonProcessingException {
+    	
+    	ObjectMapper mapper = new ObjectMapper();
+        JsonNode actualObj = mapper.readTree(messageJSON);
+        
+        
+        String recipientName = actualObj.get("name").asText();
+        String recipientEmail = actualObj.get("email").asText();
+        String transactionId = actualObj.get("transactionId").asText();
+        String billingAddress = actualObj.get("billingAddress").asText();
+        String shippingAddress = actualObj.get("shippingAddress").asText();
+    	
+    	
         // Prepare the Thymeleaf evaluation context
+        Locale locale = new Locale("en");
         final Context context = new Context(locale);
         context.setVariable("name", recipientName);
+        context.setVariable("transactionId", transactionId);
+        context.setVariable("billingAddress", billingAddress);
+        context.setVariable("shippingAddress", shippingAddress);
+
 
         // Prepare message using a Spring helper
         final MimeMessage mimeMessage = this.mailSender.createMimeMessage();
@@ -45,6 +67,8 @@ public class EmailService {
 
         // Create the HTML body using Thymeleaf..template is sample.html
         final String htmlContent = this.templateEngine.process("user/email/sample-email", context);
+        //final String htmlContent = messageContent;
+
         message.setText(htmlContent, true /* isHtml */);
 
 
