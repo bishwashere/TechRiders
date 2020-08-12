@@ -1,0 +1,50 @@
+<<<<<<< HEAD
+package com.techriders.logisticservice.ErrorClass;
+=======
+<<<<<<< HEAD:instore-pickup-service/src/main/java/com/techriders/instorepickupservice/ErrorClass/DomainErrors.java
+package com.techriders.instorepickupservice.ErrorClass;
+=======
+package com.techriders.logisticservice.ErrorClass;
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed:logistic-service/src/main/java/com/techriders/logisticservice/ErrorClass/DomainErrors.java
+>>>>>>> 7f4ddc30fd21021c4ca373e95d6965e5a79f8eed
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DomainErrors {
+
+    private String errorType;
+    private String message;
+
+    public List<DomainError> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(List<DomainError> errors) {
+        this.errors = errors;
+    }
+
+    private List<DomainError> errors = new ArrayList<DomainError>();
+
+    public void addError(DomainError error) {
+        errors.add(error);
+    }
+
+    public String getErrorType() {
+        return errorType;
+    }
+
+    public void setErrorType(String errorType) {
+        this.errorType = errorType;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+}
