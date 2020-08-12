@@ -37,16 +37,15 @@ public class Receiver {
 
 		TimeUnit.SECONDS.sleep(10);
 
-		rabbitMQSender.send(message);
-
 //		OrderedProduct orderedProduct = new OrderedProduct(message);
 //		List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
 //		orderedProducts.add(orderedProduct);
 //		ProductOrder productOrder = new ProductOrder(message);
 //		productOrder.setOrderedProducts(orderedProducts);
 //		// Save.........
-//      System.out.println("Saved");
-
+		
+		System.out.println("Sent to e-mail");
+		rabbitMQSender.send(message);
 		latch.countDown();
 	}
 

@@ -7,6 +7,7 @@ import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -18,11 +19,18 @@ public class WarehouseServiceApplication {
 
   public static final String topicExchangeName = "warehouse-exchange";  
 
-  static final String queueName = "order-queue";
+  static final String queueNameOrder = "order-queue";
+  
+  static final String queueNameEmail = "email-queue";
 
   @Bean
-  Queue queue() {
-    return new Queue(queueName, false);
+  Queue queue1() {
+    return new Queue(queueNameOrder, false);
+  }
+  
+  @Bean
+  Queue queue2() {
+    return new Queue(queueNameEmail, false);
   }
 
   @Bean
@@ -31,8 +39,13 @@ public class WarehouseServiceApplication {
   }
 
   @Bean
-  Binding binding(Queue queue, TopicExchange exchange) {
+  Binding binding1(@Qualifier("queue1") Queue queue, TopicExchange exchange) {
     return BindingBuilder.bind(queue).to(exchange).with("foo.bar.#");
+  }
+  
+  @Bean
+  Binding binding2(@Qualifier("queue2") Queue queue, TopicExchange exchange) {
+    return BindingBuilder.bind(queue).to(exchange).with("email.bar.#");
   }
 
   @Bean
@@ -40,7 +53,7 @@ public class WarehouseServiceApplication {
       MessageListenerAdapter listenerAdapter) {
     SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
     container.setConnectionFactory(connectionFactory);
-    container.setQueueNames(queueName);
+    container.setQueueNames(queueNameOrder);
     container.setMessageListener(listenerAdapter);
     return container;
   }
