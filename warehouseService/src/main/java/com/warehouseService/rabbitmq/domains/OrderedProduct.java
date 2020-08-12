@@ -40,21 +40,28 @@ public class OrderedProduct implements Serializable {
 
     }
 
-    public OrderedProduct(String price, String quantity, String tax) {
-    	this.price = Float.parseFloat(price);
-    	this.qty = Integer.parseInt(quantity);
-    	this.tax = Float.parseFloat(tax);
-    }
+//    public OrderedProduct(String price, String quantity, String tax) {
+//    	this.price = Float.parseFloat(price);
+//    	this.qty = Integer.parseInt(quantity);
+//    	this.tax = Float.parseFloat(tax);
+//    }
 
-    public OrderedProduct(String message) throws JsonMappingException, JsonProcessingException {
-    	ObjectMapper mapper = new ObjectMapper();
-	    JsonNode actualObj = mapper.readTree(message);
-    	
-	    Gson gson = new Gson();
-		this.price = Double.valueOf(actualObj.get("orderedProducts").get("price").asDouble()).floatValue();
-		this.qty = actualObj.get("quantity").get("price").asInt();
-		this.tax = Double.valueOf(actualObj.get("orderedProducts").get("tax").asDouble()).floatValue();
-	}
+//    public OrderedProduct(String message) throws JsonMappingException, JsonProcessingException {
+//    	System.out.println("Inside OrderedProduct 1");
+//    	ObjectMapper mapper = new ObjectMapper();
+//	    JsonNode actualObj = mapper.readTree(message);
+//    	
+//	    System.out.println("Inside OrderedProduct 2");
+//	    Gson gson = new Gson();
+//	    JsonNode OrderedProductJson = actualObj.get("orderedProducts");
+//		System.out.println("Inside OrderedProduct 3");
+//
+//		this.price = Double.valueOf(OrderedProductJson.get("price").asDouble()).floatValue();
+//		System.out.println("Inside OrderedProduct 3");
+//		this.qty = actualObj.get("quantity").get("price").asInt();
+//		this.tax = Double.valueOf(actualObj.get("orderedProducts").get("tax").asDouble()).floatValue();
+//		System.out.println("Inside OrderedProduct 4");
+//	}
 
 	public Long getId() {
         return id;
