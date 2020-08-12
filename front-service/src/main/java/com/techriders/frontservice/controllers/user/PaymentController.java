@@ -41,9 +41,6 @@ public class PaymentController {
     @Autowired
     ShippingAddressService shippingAddressService;
 
-    @Autowired
-    JavaMailSender javaMailSender;
-
 
     @GetMapping(value = {"/", ""})
     public String paymentInput(@ModelAttribute("payment") Payment payment) {
@@ -53,9 +50,11 @@ public class PaymentController {
 
     @PostMapping(value = {"/", ""})
     public String savePayment(@Valid @ModelAttribute("payment") Payment payment, BindingResult result, Model model, HttpSession session, RedirectAttributes redirectAttributes) {
+
         if (result.hasErrors()) {
             return "/user/paymentForm";
         } else {
+
             BillingAddress billingAddress = (BillingAddress) session.getAttribute("billingAddress");
             ShippingAddress shippingAddress = (ShippingAddress) session.getAttribute("shippingAddress");
 
@@ -78,10 +77,6 @@ public class PaymentController {
             productOrder.setBuyer(user);
 
 
-            //message is remaining
-
-            Long points = 5l;
-
             //collecting product
             List<OrderedProduct> orderedProducts = new ArrayList<OrderedProduct>();
             List<Long> ids = new ArrayList<Long>();
@@ -100,33 +95,6 @@ public class PaymentController {
 
             productOrder.setOrderedProducts(orderedProducts);
             productOrderService.save(productOrder);
-
-            try {
-                SimpleMailMessage mail = new SimpleMailMessage();
-                mail.setFrom("TechRiders");
-                mail.setTo(user.getEmail());
-                mail.setSubject("Order Placed.");
-                StringBuffer stringBuffer = new StringBuffer();
-                stringBuffer.append("Hi ");
-                stringBuffer.append(user.getFirstName());
-                stringBuffer.append(",");
-                stringBuffer.append("\n");
-                stringBuffer.append("You placed order in TechRiders successfully.\n");
-                stringBuffer.append("We are very happy for choosing TechRiders.");
-                stringBuffer.append("Your transaction Id is:"+productOrder.getTransactionId());
-                stringBuffer.append("\nThank you.\n");
-                stringBuffer.append("TechRiders Team");
-                mail.setText(stringBuffer.toString());
-                javaMailSender.send(mail);
-            } catch (NoSuchElementException e) {
-
-            } catch (NullPointerException e) {
-
-            }
-
-            userService.addPointsById(user.getId(),points);//adding 5 points to
-
-            session.setAttribute("user_points",user.getPoints()+points);
 
             session.setAttribute("cart_item",null);
 

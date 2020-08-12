@@ -10,8 +10,10 @@ import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
 @SpringBootApplication
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WarehouseServiceApplication {
 
   static final String topicExchangeName = "warehouse-service-exchange";

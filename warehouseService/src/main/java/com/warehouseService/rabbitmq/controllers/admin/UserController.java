@@ -6,6 +6,7 @@ import com.warehouseService.rabbitmq.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping(value = {"", "/"})
+    @PreAuthorize("hasRole('ADMIN')")
     public String index(Model model) {
         model.addAttribute("users", userService.findAll());
         return "admin/user_list";

@@ -80,7 +80,7 @@
                                 <ul class="dropdown-menu">
                                     <li sec:authorize="hasRole('ROLE_SELLER')"><a href="#" th:href="@{/seller/account/order-list}">Order List</a></li>
                                     <li sec:authorize="hasRole('ROLE_SELLER')"><a href="#" th:href="@{/seller/product-list}" >Product List</a></li>
-                                    <li sec:authorize="hasRole('ROLE_BUYER')"><a href="#" th:href="@{/account/order-history}">Order History</a></li>
+                                    <li sec:authorize="hasRole('ROLE_BUYER')"><a href="#" th:href="@{/account/account/order-history}">Order History</a></li>
                                     <li><a href="#" th:href="@{/logout}">SignOut</a></li>
                                 </ul>
                             </li>
