@@ -16,7 +16,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WarehouseServiceApplication {
 
-  static final String topicExchangeName = "order-exchange";
+  public static final String topicExchangeName = "warehouse-exchange";  
 
   static final String queueName = "order-queue";
 
