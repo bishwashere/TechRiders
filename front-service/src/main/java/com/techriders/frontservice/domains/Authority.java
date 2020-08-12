@@ -8,7 +8,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "role")
 public class Authority implements Serializable {
 
 
@@ -19,11 +18,7 @@ public class Authority implements Serializable {
     @Size(max = 12)
     private String authority;
 
-    @ManyToMany
-    @JoinTable(name = "role_user",
-            joinColumns = {@JoinColumn(name = "role_id",referencedColumnName = "role.id")},
-            inverseJoinColumns = {@JoinColumn(name = "user_name",referencedColumnName = "user.user_name")}
-    )
+    @ManyToMany(mappedBy = "authorities")
     private List<User> users;
 
     public Authority() {

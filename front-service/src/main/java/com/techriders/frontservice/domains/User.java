@@ -51,7 +51,8 @@ public class User implements Serializable {
 
     private Long points = 0l;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany
+    @JoinTable
     private List<Authority> authorities;
 
     @OneToMany(cascade = CascadeType.ALL)
