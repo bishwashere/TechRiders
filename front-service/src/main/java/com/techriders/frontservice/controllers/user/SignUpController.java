@@ -22,7 +22,7 @@ public class SignUpController {
     UserService userService;
 
     @GetMapping(value = "/signup")
-    public String signupForm(@ModelAttribute("user") User user,Model model){
+    public String signupForm(@ModelAttribute("user") User user, Model model){
         model.addAttribute("label","");
         return "user/signup";
     }
@@ -33,7 +33,7 @@ public class SignUpController {
             model.addAttribute("error_msg","Error Occured.");
             return "user/signup";
         }else{
-            user.setAuthorities(RoleEnum.ROLE_BUYER);
+//            user.setAuthorities(RoleEnum.ROLE_BUYER);
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             user.setPassword(encoder.encode(user.getPassword()));
             userService.save(user);
