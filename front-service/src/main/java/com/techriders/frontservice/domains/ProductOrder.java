@@ -90,4 +90,17 @@ public class ProductOrder {
     public void setOrderedProducts(List<OrderedProduct> orderedProducts) {
         this.orderedProducts = orderedProducts;
     }
+    
+    @Override
+	public String toString() {
+		return "{" +
+	        "\"transactionId\":\"" + transactionId + "\"" +
+	        ", \"buyer\":\"" + buyer.getId() + "\"" +
+	        ", \"billingAddress\":\"" + billingAddress.getId() + "\"" +
+	        ", \"shippingAddress\":\"" + shippingAddress.getId() + "\"" +
+	        ", \"orderStatus\":\"" + orderStatus + "\"" +
+	        ", \"orderedProducts\":\"" + orderedProducts.toString() + "\"" +
+        "}";
+	}
+    
 }
