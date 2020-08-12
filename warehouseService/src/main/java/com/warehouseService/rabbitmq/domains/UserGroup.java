@@ -6,36 +6,39 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class Authority implements Serializable {
+public class UserGroup implements Serializable {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Size(max = 12)
-    private String authority;
+    private String groupName;
 
-    @ManyToMany(mappedBy = "authorities")
+    @ManyToMany(mappedBy = "userGroups")
     private List<User> users;
 
-    public Authority() {
+    public String toString(){
+        return groupName;
+    }
+    public UserGroup() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getAuthority() {
-        return authority;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setAuthority(String authority) {
-        this.authority = authority;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
     public List<User> getUsers() {
@@ -45,4 +48,6 @@ public class Authority implements Serializable {
     public void setUsers(List<User> users) {
         this.users = users;
     }
+
+
 }

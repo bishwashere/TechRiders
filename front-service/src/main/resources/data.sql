@@ -1,23 +1,23 @@
-insert into authority (id,authority) values (1,'ROLE_ADMIN');
-insert into authority (id,authority) values (2,'ROLE_SELLER');
-insert into authority (id,authority) values (3,'ROLE_BUYER');
+insert into user_group (id,group_name) values (1,'ROLE_ADMIN');
+insert into user_group (id,group_name) values (2,'ROLE_SELLER');
+insert into user_group (id,group_name) values (3,'ROLE_BUYER');
 
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (1,1, 'admin@gmail.com','Admin','','$2a$10$pz4xJn5hEFaxKCpJYdCIFeJgwtaqiJ24Th8bk0Lm2w2y.Db5Cslom','admin',1,0);
-insert into user_authorities (users_id,authorities_id) values (1,1);
+insert into user_user_groups (users_id,user_groups_id) values (1,1);
 
 
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (2,1, 'seller@gmail.com','Seller','','$2a$10$SCWgUYqcvf5s4w4cNZmFI.5RQ/Iby2ItE2pEXk9lsaD2KBO/ZWeFO','seller',1,0);
-insert into user_authorities (users_id,authorities_id) values (2,2);
-insert into user_authorities (users_id,authorities_id) values (4,1);
+insert into user_user_groups (users_id,user_groups_id) values (2,2);
+insert into user_user_groups (users_id,user_groups_id) values (4,1);
 
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (3,0, 'seller2@gmail.com','Seller2','','$2a$10$SCWgUYqcvf5s4w4cNZmFI.5RQ/Iby2ItE2pEXk9lsaD2KBO/ZWeFO','seller2',1,0);
-insert into user_authorities (users_id,authorities_id) values (3,2);
+insert into user_user_groups (users_id,user_groups_id) values (3,2);
 
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (4,1, 'buyer@gmail.com','Buyer','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer',1,0);
-insert into user_authorities (users_id,authorities_id) values (4,3);
+insert into user_user_groups (users_id,user_groups_id) values (4,3);
 
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (5,1, 'buyer2@gmail.com','Buyer2','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer2',1,0);
-insert into user_authorities (users_id,authorities_id) values (4,3);
+insert into user_user_groups (users_id,user_groups_id) values (5,3);
 
 
 
@@ -36,8 +36,8 @@ insert into product (id,name,price, tax, cat_id, description, product_image, add
 insert into product (id,name,price, tax, cat_id, description, product_image, added_by,sold_status) values (2,'Wireless Earphone',23.8,10,1,'<h3>Features:</h3>LEMFO M1 Smart Bracelet BT Earphone 0.96-Inch TFT Screen Smart Watch Heart Rate Blood Pressure Monitoring Calorie Fitness Alarm Sports Wristwatch for Android / iOS Valentines Day Gifts for Her/Him','watch.jpg',2,false);
 insert into product (id,name,price, tax, cat_id, description, product_image, added_by,sold_status) values (1,'Macbook Pro 16',2500.8,10,1,'<h3>Features:</h3>\nPrice. $1299. ...\n Finish. Silver Space Gray.\n Display. Retina display. ...\n Processor. 1.4GHz quad‑core 8th‑generation Intel Core i5, Turbo Boost up to 3.9GHz, with 128MB of eDRAM. ...\n Storage1 256GB. ...\n Memory. 8GB. ...\n Graphics. Intel Iris Plus Graphics 645.Charging and Expansion','macbook-pro.jpg',2,false);
 
--- CMS
-# insert into content(slug,cont,name) values('privacy-policy','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','Privacy Policy');
-# insert into content(slug,cont,name) values('terms-and-conditions','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','Terms and Condition');
-# insert into content(slug,cont,name) values('about-us','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','About');
-# insert into content(slug,cont,name) values('faq','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','FAQ');
+# CMS
+insert into content(slug,cont,name) values('privacy-policy','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','Privacy Policy');
+insert into content(slug,cont,name) values('terms-and-conditions','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','Terms and Condition');
+insert into content(slug,cont,name) values('about-us','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','About');
+insert into content(slug,cont,name) values('faq','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod','FAQ');

@@ -24,7 +24,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping(value = {"", "/"})
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasPermission(#id,'user-list')")
     public String index(Model model) {
         model.addAttribute("users", userService.findAll());
         return "admin/user_list";

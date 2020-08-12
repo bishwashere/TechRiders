@@ -3,6 +3,9 @@ package com.warehouseService.rabbitmq.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.access.PermissionEvaluator;
+import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
+import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -22,6 +25,8 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     DataSource dataSource;
 
+    @Autowired
+    PermissionEvaluator customPermissionEvaluator;
 
     @Bean
     SimpleUrlAuthenticationFailureHandler authFailureHandler(){
@@ -34,7 +39,12 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
-                .authoritiesByUsernameQuery("select u.user_name, a.authority from user u,authority a,user_authorities ua where (u.user_name = ? and ua.users_id = u.id and a.id = ua.authorities_id and (a.authority = 'ROLE_SELLER' OR a.authority = 'ROLE_ADMIN'))");
+                .authoritiesByUsernameQuery("select u.user_name, a.group_name from user u,user_group a,user_user_groups ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_groups_id and (a.group_name = 'ROLE_SELLER' OR a.group_name = 'ROLE_ADMIN'))");
+
+        //select g.id, g.group_name, a.authority
+        //                               from GroupsToo g, GroupsToo_credentials gc, GroupsToo_authority ga, authority a
+        //                                where gc.userCredentials_username = ? and g.id = ga.GroupsToo_id and g.id = gc.GroupsToo_id
+        //                                and ga.authority_id = a.id
     }
 
     @Override
@@ -59,6 +69,11 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder getPasswordEncoder(){
         return new BCryptPasswordEncoder();
-//        return NoOpPasswordEncoder.getInstance();
+        //return NoOpPasswordEncoder.getInstance();
+    }
+    protected MethodSecurityExpressionHandler expressionHandler() {
+        DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
+        expressionHandler.setPermissionEvaluator(customPermissionEvaluator);
+        return expressionHandler;
     }
 }

@@ -24,11 +24,11 @@ layout:decorate="~{/user/layouts/layout}"
                     <input th:field="*{lastName}" class="form-control" id="lastName" aria-describedby="lastNameHelp" placeholder="Enter Last Name">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-userGroup">
                 <label for="addressL1">Country/Region</label>
                 <input th:field="*{addressL1}" placeholder="Street Adress, PoBox, company name, c/o" class="form-control" id="addressL1" aria-describedby="addressL1Help">
             </div>
-            <div class="form-group">
+            <div class="form-userGroup">
                 <label for="addressL2">Address line 2</label>
                 <input th:field="*{addressL2}" class="form-control" id="addressL2" aria-describedby="addressL2Help" placeholder="Appartment, building, suite, unit, floor, etc">
             </div>
@@ -51,13 +51,13 @@ layout:decorate="~{/user/layouts/layout}"
                     <input th:field="*{zipCode}" class="form-control" id="zipCode" aria-describedby="zipCodeHelp" placeholder="Enter Zip Code">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-userGroup">
                 <label for="phoneNumber">Phone Number</label>
                 <input th:field="*{phoneNumber}" class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp" placeholder="Enter Phone number">
                 <small id="phoneHelp" class="form-text text-muted">May be used to assist delivery</small>
             </div>
             <h4>Add delivery instructions (optional)</h4>
-            <div class="form-group">
+            <div class="form-userGroup">
 
                 <label for="extraInfo">Do we need additional instructions to find this address? </label>
                 <textarea id="extraInfo" th:field="*{extraInfo}" class="form-control is-invalid" placeholder="Please enter extra information"></textarea>
