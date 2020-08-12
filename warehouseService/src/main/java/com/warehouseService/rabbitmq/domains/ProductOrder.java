@@ -1,9 +1,16 @@
 package com.warehouseService.rabbitmq.domains;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.warehouseService.rabbitmq.services.BillingAddressService;
+import com.warehouseService.rabbitmq.services.UserService;
 import com.warehouseService.rabbitmq.configs.OrderStatusEnum;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.List;
@@ -34,8 +41,25 @@ public class ProductOrder {
 
     public ProductOrder() {
     }
+    
+    @Autowired
+    UserService userService;
+    
+    @Autowired
+    BillingAddressService billingAddressService;
 
-    public Long getId() {
+    public ProductOrder(String message) throws JsonMappingException, JsonProcessingException {
+    	ObjectMapper mapper = new ObjectMapper();
+	    JsonNode actualObj = mapper.readTree(message);
+	    this.transactionId=actualObj.get("transactionId").asLong();
+	    this.buyer= userService.findById(actualObj.get("buyer").asInt());
+	    this.billingAddress=billingAddressService.findById(actualObj.get("billingAddress").asInt());
+//	    String orderStatus = actualObj.get("orderStatus").textValue();
+//	    this.orderStatus=OrderStatusEnum.orderStatus
+	    this.orderStatus=OrderStatusEnum.PENDING;
+	}
+
+	public Long getId() {
         return id;
     }
 

@@ -79,6 +79,10 @@ public class OrderedProduct implements Serializable {
     
     @Override
 	public String toString() {
-		return "OrderedProduct [price=" + getPrice() + ", quantity=" + getQty() + ", tax=" + getTax() + "]";
+		return "{" +
+	        "\'price\':\'" + getPrice() + "\'" +
+	        ", \'quantity\':\'" + getQty() + "\'" +
+	        ", \'tax\':\'" + getTax() + "\'" +
+        "}";
 	}
 }
