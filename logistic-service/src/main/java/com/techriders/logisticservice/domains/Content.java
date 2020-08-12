@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+
 @Entity
 @Table(name = "Content")
 public class Content implements Serializable {
@@ -12,6 +13,9 @@ public class Content implements Serializable {
     //private static final long serialVersionUID = 3678107792576131001L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Integer id;
+
     @NotNull
     private String slug;
 

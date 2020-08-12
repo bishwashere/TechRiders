@@ -1,9 +1,10 @@
 package com.techriders.logisticservice.controllers;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-//@Controller
+@Controller
 public class ErrorsController implements ErrorController {
 
     @Override

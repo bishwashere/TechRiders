@@ -1,4 +1,4 @@
-package com.warehouseService.rabbitmq.configs;
+package com.techriders.logisticservice.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.PermissionEvaluator;

@@ -1,6 +1,6 @@
-package com.techriders.logisticservice.configs;
+package com.warehouseService.rabbitmq.configs;
 
-import com.techriders.logisticservice.services.UserService;
+import com.warehouseService.rabbitmq.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;

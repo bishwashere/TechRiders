@@ -1,6 +1,7 @@
 package com.warehouseService.rabbitmq.configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.PermissionEvaluator;
@@ -10,6 +11,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
@@ -23,30 +25,26 @@ import javax.sql.DataSource;
 public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    CustomPermissionEvaluator customPermissionEvaluator;
+
+    @Autowired
     DataSource dataSource;
 
     @Autowired
-    PermissionEvaluator customPermissionEvaluator;
-
-    @Bean
-    SimpleUrlAuthenticationFailureHandler authFailureHandler(){
-        return new SimpleUrlAuthenticationFailureHandler();
-    }
+    AuthSuccessHandler authSuccessHandler;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
+
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
-                .authoritiesByUsernameQuery("select u.user_name, a.role_name from user u,user_role a,user_user_roles ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_roles_id and (a.role_name = 'ROLE_SELLER' OR a.role_name = 'ROLE_ADMIN'))");
+                .authoritiesByUsernameQuery("select u.user_name, a.role_name  from user u,user_role a,user_user_roles ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_roles_id and (a.role_name = 'ROLE_SELLER' OR a.role_name = 'ROLE_ADMIN'))");
 
-        //select g.id, g.group_name, a.authority
-        //                               from GroupsToo g, GroupsToo_credentials gc, GroupsToo_authority ga, authority a
-        //                                where gc.userCredentials_username = ? and g.id = ga.GroupsToo_id and g.id = gc.GroupsToo_id
-        //                                and ga.authority_id = a.id
     }
-
+//com.warehouseService.rabbitmq
+//com.techriders.logisticservice
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -54,6 +52,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/administration","/administration/*","/administration/**").hasAnyRole("ADMIN","SELLER")
                 .and().formLogin().loginPage("/")
                 .defaultSuccessUrl("/administration")
+//                .successHandler(authSuccessHandler)
                 .and()
                 .logout()
                 .logoutUrl("/logout")
