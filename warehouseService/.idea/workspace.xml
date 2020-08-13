@@ -1,7 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="" />
+    <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ContentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ContentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/EmailSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/ErrorClass/DomainError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/ErrorClass/DomainErrors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/Receiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/WarehouseServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/annotations/EmailUnique.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/annotations/EmailUniqueValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/annotations/UserNameUnique.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/annotations/UserNameUniqueValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/configs/AuthSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/configs/CustomPermissionEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/configs/OrderStatusEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/configs/RoleEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/configs/SpringSecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/configs/WebMvcConfigurerInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/ErrorsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/AdminOrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/AdminProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/ContentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/DashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/SignInController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/controllers/admin/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/BillingAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/CheckOut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/Content.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/OrderedProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/ProductOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/RolePermission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/ShippingAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/domains/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/helpers/MyHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/BillingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/ContentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/OrderedProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/PaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/ProductOrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/ShippingAddressRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/repositories/UserRoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/BillingAddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/ContentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/FilesStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/OrderedProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/PaymentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/ProductOrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/RabbitMQSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/ShippingAddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/UserRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/BillingAddressImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/ContentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/FilesStorageServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/OrderedProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/PaymentImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/ProductOrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/ShippingAddresImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/UserRoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbitmq/services/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techriders/logisticservice/LogisticserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/EmailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/EmailSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainErrors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainErrors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/Receiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/WarehouseServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/WarehouseServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/EmailUniqueValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/EmailUniqueValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/UserNameUniqueValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/UserNameUniqueValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/CustomPermissionEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/CustomPermissionEvaluator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/OrderStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/OrderStatusEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/RoleEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/RoleEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/SpringSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/SpringSecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit$SpringFoxConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit$SpringFoxConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/ContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/ContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Content.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/OrderedProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/OrderedProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ProductOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ProductOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/RolePermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/RolePermission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/UserRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/BillingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/BillingRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ContentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ContentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/OrderedProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/OrderedProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/PaymentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/PaymentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductOrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductOrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ShippingAddressRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ShippingAddressRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/BillingAddressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/BillingAddressService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ContentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/FilesStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/FilesStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/OrderedProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/OrderedProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/RabbitMQSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/RabbitMQSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ShippingAddressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ShippingAddressService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserRoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/BillingAddressImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/BillingAddressImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/CategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/FilesStorageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/FilesStorageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/OrderedProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/OrderedProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/PaymentImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/PaymentImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ShippingAddresImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ShippingAddresImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserRoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/EmailSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/ErrorClass/DomainError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/ErrorClass/DomainErrors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/WarehouseServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/annotations/EmailUnique.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/annotations/EmailUniqueValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/annotations/UserNameUnique.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/annotations/UserNameUniqueValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/AuthSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/CustomPermissionEvaluator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/OrderStatusEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/RoleEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/SpringSecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/WebMvcConfigurerInit$SpringFoxConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/configs/WebMvcConfigurerInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/ErrorsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/AdminOrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/AdminProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/ContentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/DashboardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/SignInController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/controllers/admin/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/BillingAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/CheckOut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/Content.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/OrderedProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/Payment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/ProductOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/RolePermission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/ShippingAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/domains/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/helpers/MyHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/BillingRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/CategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/ContentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/OrderedProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/PaymentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/ProductOrderRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/ShippingAddressRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/repositories/UserRoleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/BillingAddressService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/ContentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/FilesStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/OrderedProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/PaymentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/ProductOrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/RabbitMQSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/ShippingAddressService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/UserRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/BillingAddressImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/CategoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/ContentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/FilesStorageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/OrderedProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/PaymentImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/ProductOrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/ShippingAddresImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/UserRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbitmq/services/impl/UserServiceImpl.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,45 +322,45 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597259128116" />
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597299822092">
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597301037687">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822092" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037687" />
     <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010253" />
-    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597299822090">
+    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597301037685">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822090" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037685" />
     <state width="1750" height="318" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010251" />
-    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597299822089">
+    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597301037684">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822089" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037684" />
     <state width="1750" height="318" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010249" />
-    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597299822091">
+    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597301037686">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822091" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037686" />
     <state width="1750" height="318" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010251" />
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597299822094">
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597301037689">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822094" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037689" />
     <state width="1750" height="318" key="GridCell.Tab.1.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010257" />
-    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597299822093">
+    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597301037688">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822093" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037688" />
     <state width="1750" height="318" key="GridCell.Tab.1.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010255" />
-    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597299822092">
+    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597301037687">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822092" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037687" />
     <state width="1750" height="318" key="GridCell.Tab.1.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010254" />
-    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597299822093">
+    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597301037689">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597299822093" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597301037689" />
     <state width="1750" height="318" key="GridCell.Tab.1.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597272010256" />
     <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597287940595">
       <screen x="0" y="0" width="1792" height="1120" />
