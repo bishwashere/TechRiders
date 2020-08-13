@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}"
+>
+<head>
+    <title>TechRiders Signup</title>
+    <!--    <link rel="stylesheet" >-->
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container content p-15">
+        <div class="mt-80 mb-120 row">
+            <form class="col-md-offset-4 col-md-4" th:object="${user}" method="post">
+                <h3><span th:text="${label}"></span> Registration form</h3>
+                <p th:if="${label == 'Buyer'}">Buy product and gain points.</p>
+                <p th:if="${label == 'Seller'}">Start your business here.</p>
+                <div th:if="${error_msg != null}">
+                    <div class="alert alert-danger" role="alert" th:text="${error_msg}">Error message</div>
+                </div>
+                <div th:if="${success_msg != null}">
+                    <div class="alert alert-success" role="alert" th:text="${success_msg}">Error message</div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" th:field="*{firstName}" />
+                    <p class="text-danger" th:errors="*{firstName}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" th:field="*{lastName}" value="">
+                    <p class="text-danger" th:errors="*{lastName}"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" th:field="*{email}" value="">
+                    <p class="text-danger" th:errors="*{email}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <input type="text" class="form-control" id="Username" th:field="*{userName}" value="">
+                    <p class="text-danger" th:errors="*{userName}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" th:field="*{password}" value="">
+                    <p class="text-danger" th:errors="*{password}"></p>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span> SignUp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

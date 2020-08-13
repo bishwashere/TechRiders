@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="col-md-8 col-md-offset-2">
+        <form th:object="${payment}" method="post">
+            <h2 id="heading2" class="text-danger mb-3">Payment Method</h2>
+            <div class="row form-group">
+                <div class="col-md-3 mb-3">
+                    <label> Choose card type: </label>
+                </div>
+                <div class="custom-control custom-radio col-md-3 mb-3">
+                    <input type="radio" class="custom-control-input" id="creditCard" th:field="*{paymentType}"
+                           th:value="creditCard" checked>
+                    <label class="custom-control-label" for="creditCard">Credit Card</label>
+                </div>
+                <div class="custom-control custom-radio col-md-2 mb-3">
+                    <input type="radio" class="custom-control-input" id="debitCard" th:field="*{paymentType}"
+                           th:value="debitCard">
+                    <label class="custom-control-label" for="debitCard">Debit Card</label>
+                </div>
+                <div class="custom-control custom-radio col-md-3 mb-3">
+                    <input type="radio" class="custom-control-input" id="payPal" th:field="*{paymentType}"
+                           th:value="payPal">
+                    <label class="custom-control-label" for="payPal">PayPal</label>
+                </div>
+                <div class="col-lg-12">
+                    <p class="text-danger" th:errors="*{paymentType}"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="cardName">Card Name</label>
+                        <input th:field="*{cardName}" placeholder="Enter the name on the card" class="form-control"
+                               id="cardName" aria-describedby="cardNameHelp">
+                        <p class="text-danger" th:errors="*{cardName}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input th:field="*{cardNumber}" class="form-control" id="cardNumber"
+                               aria-describedby="cardNumberHelp" placeholder="0000 0000 0000 0000 ">
+                        <p class="text-danger" th:errors="*{cardNumber}"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4 mb-3">
+                    <label for="cardExpiry">Card Expiry</label>
+                    <input th:field="*{cardExpiry}" class="form-control" id="cardExpiry"
+                           aria-describedby="cardExpiryHelp" placeholder="MM/YY">
+                    <p class="text-danger" th:errors="*{cardExpiry}"></p>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="CVV">CVV</label>
+                    <input th:field="*{CVV}" class="form-control" id="CVV" aria-describedby="CVVHelp" placeholder="000">
+                    <p class="text-danger" th:errors="*{CVV}"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mr-1">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

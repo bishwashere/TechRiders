@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipping address Saved</title>
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">first Name</th>
+                <th scope="col">last Name</th>
+                <th scope="col">address Line1</th>
+                <th scope="col">address Line1</th>
+                <th scope="col">country</th>
+                <th scope="col">state</th>
+                <th scope="col">city</th>
+                <th scope="col">zipCode</th>
+                <th scope="col">phone number</th>
+                <th scope="col">extraInfo</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="shippA, iterStat : ${allShippingAddress}">
+                    <td scope="row" th:text="${iterStat.count}"></td>
+                    <td th:text="${shippA.firstName}"></td>
+                    <td th:text="${shippA.lastName}"></td>
+                    <td th:text="${shippA.addressL1}"></td>
+                    <td th:text="${shippA.addressL2}"></td>
+                    <td th:text="${shippA.country}"></td>
+                    <td th:text="${shippA.state}"></td>
+                    <td th:text="${shippA.city}"></td>
+                    <td th:text="${shippA.zipCode}"></td>
+                    <td th:text="${shippA.phoneNumber}"></td>
+                    <td th:text="${shippA.extraInfo}"></td>
+                    <td><a th:href="@{/account/address/shipping/editShipping/{id}(id=${shippA.id})}">Update</a></td>
+                    <td><a th:href="@{/account/address/shipping/deleteShipping/{id}(id=${shippA.id})}">Delete</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+</div>
+</body>
+</html>
