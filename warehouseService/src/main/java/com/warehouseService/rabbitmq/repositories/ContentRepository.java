@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ContentRepository extends CrudRepository<Content,String>{
 
-    Content findBySlug(String slug);
-
-    void deleteBySlug(String slug);
+    @Query(value ="select c from Content c where c.slug = :slug", nativeQuery = true)
+    Content getContentBySlug(String slug);
 }

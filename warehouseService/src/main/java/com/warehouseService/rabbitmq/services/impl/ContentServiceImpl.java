@@ -27,14 +27,13 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
-    public Content findBySlug(String slug) {
-
-        return contentRepository.findBySlug(slug);
+    public Content find(String slug) {
+        return contentRepository.findById(slug).get();
     }
 
     @Override
-    public void deleteBySlug(String slug) {
-        contentRepository.deleteBySlug(slug);
+    public void delete(String slug) {
+        contentRepository.deleteById(slug);
 
     }
 
