@@ -327,3 +327,10 @@ table.dataTable thead .sorting:after {
 .show-grid {
     margin: 15px 0;
 }
+.navbar-brand {
+    padding: 0;
+    margin-left: 68px;
+}
+.navbar-header img{
+    height: 54px;
+}
