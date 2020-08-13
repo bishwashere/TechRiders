@@ -12,9 +12,9 @@
 <nav th:fragment="header-navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="" style="padding-top: 20px">
         <div class="container theme-header-top">
-            <div class="col-sm-2 col-sm-text-center"><a href="/"><img th:src="@{/images/logo.jpg}"></a></div>
+            <div class="col-sm-2 col-sm-text-center"><a href="/"><img th:src="@{/images/logo.png}"></a></div>
             <div class="col-sm-9">
-                <form action="/">
+                <form action="/" class="set-at-middle">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <div class="btn-group">
@@ -42,7 +42,7 @@
                 </form>
             </div>
             <div class="col-sm-1">
-                <div class="item-indicate">
+                <div class="item-indicate set-at-middle">
                     <a th:href="@{/account/cart-details}"><span class="glyphicon glyphicon-shopping-cart"></span>
                         <span class="item-count" th:text="${(session.cart_item != null)?session.cart_item.size():0}">0</span>
                     </a>

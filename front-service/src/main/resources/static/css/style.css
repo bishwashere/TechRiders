@@ -7,7 +7,7 @@
 }
 
 .theme-header-top img {
-    height: 48px;
+    height: 89px;
 }
 .theme-header-top *{
     color: #000000;
@@ -210,4 +210,7 @@
 .small-middle-container{
     margin: auto;
     width: 40%;
+}
+.set-at-middle{
+    margin-top: 20px;
 }
