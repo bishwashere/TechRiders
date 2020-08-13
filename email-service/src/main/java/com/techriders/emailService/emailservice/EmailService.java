@@ -46,8 +46,10 @@ public class EmailService {
         String transactionId = actualObj.get("transactionId").asText();
         String billingAddress = actualObj.get("billingAddress").asText();
         String shippingAddress = actualObj.get("shippingAddress").asText();
-    	
-    	
+        String status = actualObj.get("orderStatus").asText();
+
+
+
         // Prepare the Thymeleaf evaluation context
         Locale locale = new Locale("en");
         final Context context = new Context(locale);
@@ -55,12 +57,14 @@ public class EmailService {
         context.setVariable("transactionId", transactionId);
         context.setVariable("billingAddress", billingAddress);
         context.setVariable("shippingAddress", shippingAddress);
+        context.setVariable("status", status);
+
 
 
         // Prepare message using a Spring helper
         final MimeMessage mimeMessage = this.mailSender.createMimeMessage();
         final MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");
-        message.setSubject("Tech Riders Order Details!!!");
+        message.setSubject(status+" - Tech Riders Order Details!!!");
 
         // could have CC, BCC, will also take an array of Strings
         message.setTo(recipientEmail);
