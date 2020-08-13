@@ -14,18 +14,18 @@ insert into user_role_role_permissions(user_roles_id,role_permissions_id) values
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (2,2);
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (2,4);
 
-insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (1,1, 'admin@gmail.com','Admin','','$2a$10$pz4xJn5hEFaxKCpJYdCIFeJgwtaqiJ24Th8bk0Lm2w2y.Db5Cslom','admin',1,0);
+insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (1,1, 'admin@gmail.com','Admin','','$2a$10$pz4xJn5hEFaxKCpJYdCIFeJgwtaqiJ24Th8bk0Lm2w2y.Db5Cslom','admin',1);
 insert into user_user_roles (users_id,user_roles_id) values (1,1);
 
-insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (2,1, 'seller@gmail.com','Seller','','$2a$10$SCWgUYqcvf5s4w4cNZmFI.5RQ/Iby2ItE2pEXk9lsaD2KBO/ZWeFO','seller',1,0);
+insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (2,1, 'seller@gmail.com','Seller','','$2a$10$SCWgUYqcvf5s4w4cNZmFI.5RQ/Iby2ItE2pEXk9lsaD2KBO/ZWeFO','seller',1);
 insert into user_user_roles (users_id,user_roles_id) values (2,2);
-insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (3,0, 'seller2@gmail.com','Seller2','','$2a$10$SCWgUYqcvf5s4w4cNZmFI.5RQ/Iby2ItE2pEXk9lsaD2KBO/ZWeFO','seller2',1,0);
+insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (3,0, 'seller2@gmail.com','Seller2','','$2a$10$SCWgUYqcvf5s4w4cNZmFI.5RQ/Iby2ItE2pEXk9lsaD2KBO/ZWeFO','seller2',1);
 insert into user_user_roles (users_id,user_roles_id) values (3,2);
 
-insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (4,1, 'bishwas.scholar@gmail.com','Buyer','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer',1,0);
+insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (4,1, 'bishwas.scholar@gmail.com','Buyer','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer',1);
 insert into user_user_roles (users_id,user_roles_id) values (4,3);
 
-insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status,points) values (5,1, 'buyer2@gmail.com','Buyer2','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer2',1,0);
+insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (5,1, 'buyer2@gmail.com','Buyer2','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer2',1);
 insert into user_user_roles (users_id,user_roles_id) values (5,3);
 
 

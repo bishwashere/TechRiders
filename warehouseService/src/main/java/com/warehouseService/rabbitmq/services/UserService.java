@@ -23,7 +23,6 @@ public interface UserService {
     @PreAuthorize("hasPermission(#id,'user-management')")
     boolean declinedById(Long id);
 
-    void addPointsById(Long id, Long points);
 
     User findById(long id);
 
