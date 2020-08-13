@@ -114,15 +114,9 @@ public class ProductOrder {
     public void setOrderedProducts(List<OrderedProduct> orderedProducts) {
         this.orderedProducts = orderedProducts;
     }
-    
+
     @Override
 	public String toString() {
-    	// email
-    	// Username
-    	// transaction ID
-    	// price
-    	// quantity
-    	// tax
 		return "{" +
 	        "\"transactionId\":\"" + transactionId + "\"" +
 	        ", \"email\":\"" + buyer.getEmail() + "\"" +
@@ -132,5 +126,6 @@ public class ProductOrder {
 	        ", \"orderStatus\":\"" + orderStatus + "\"" +
 	        ", \"orderedProducts\":\"" + orderedProducts.toString() + "\"" +
         "}";
-	}
+	} 
+    
 }
