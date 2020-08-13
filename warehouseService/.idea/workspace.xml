@@ -1,98 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/warehouseService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/warehouseService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/ErrorClass/DomainError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/configs/AuthSuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/configs/OrderStatusEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/controllers/ErrorsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/controllers/user/SignInController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/domains/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/domains/CheckOut.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/repositories/ContentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/repositories/PaymentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/repositories/ShippingAddressRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/services/OrderedProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techriders/logisticservice/services/impl/ContentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/ErrorClass/DomainError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/ErrorClass/DomainError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/OrderStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/OrderStatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/ErrorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/ErrorsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ContentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ContentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ShippingAddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ShippingAddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/EmailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/EmailSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainErrors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/ErrorClass/DomainErrors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/WarehouseServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/WarehouseServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/EmailUniqueValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/EmailUniqueValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/UserNameUniqueValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/annotations/UserNameUniqueValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/AuthSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/CustomPermissionEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/CustomPermissionEvaluator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/OrderStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/OrderStatusEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/RoleEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/RoleEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/SpringSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/SpringSecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit$SpringFoxConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit$SpringFoxConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/ContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/ContentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Content.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/OrderedProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/OrderedProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ProductOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ProductOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/RolePermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/RolePermission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/UserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/BillingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/BillingRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ContentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ContentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/OrderedProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/OrderedProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/PaymentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/PaymentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductOrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductOrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ShippingAddressRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/ShippingAddressRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/repositories/UserRoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/BillingAddressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/BillingAddressService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ContentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/FilesStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/FilesStorageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/OrderedProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/OrderedProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/PaymentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductOrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/RabbitMQSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/RabbitMQSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ShippingAddressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/ShippingAddressService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserRoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/BillingAddressImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/BillingAddressImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ContentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/FilesStorageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/FilesStorageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/OrderedProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/OrderedProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/PaymentImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/PaymentImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductOrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ShippingAddresImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/ShippingAddresImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserRoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/services/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/contentForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/contentForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/editContentForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/editContentForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/product_list.html" afterDir="false" />
-    </list>
+    <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -144,11 +53,11 @@
       <recent name="com.warehouseService.rabbitmq.services" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/admin" />
       <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl" />
       <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services" />
       <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunManager">
