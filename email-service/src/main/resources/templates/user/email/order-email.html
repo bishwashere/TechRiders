@@ -6,13 +6,15 @@
 </head>
 <body>
 <p th:text="#{greeting(${name})}"/>
-<H4> Here are your Order details:</H4>
+
 <p th:text="#{status(${status})}"/>
+<br/>
+<H4> Here are your Order details:</H4>
 <p th:text="#{transaction(${transactionId})}"/>
 <p th:text="#{shippingaddress(${shippingAddress})}"/>
 <p th:text="#{billingaddress(${billingAddress})}"/>
 <p><br/>
-    Thanks for your order, Keep in touch.<br/>
+    Thanks for your order, Keep in touch.<br/><br/>
     &emsp; <em><b>***TechRiders: Smells Like Team Spirit***</b></em>
 </p>
 </body>
