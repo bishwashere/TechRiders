@@ -13,6 +13,6 @@ public interface ContentService {
     public Content save(Content content);
     public Content find(String slug);
 
-    @PreAuthorize("hasPermission(#content,'content-management')")
+    @PreAuthorize("hasPermission(#slug,'content-management')")
     public void delete(String slug);
 }
