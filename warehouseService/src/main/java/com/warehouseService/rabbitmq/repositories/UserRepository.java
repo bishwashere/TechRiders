@@ -19,9 +19,6 @@ public interface UserRepository extends CrudRepository<User,Long> {
     @Query("update User u set u.adminVerification = ?1 where u.id = ?2")
     Integer changeStatus(Short status, Long id);
 
-    @Modifying
-    @Query("update User u set u.points = u.points + ?2 where u.id = ?1")
-    void addPointsById(Long id, Long points);
 
 
     List<User>findTop10ByFirstNameContaining(String firstName);

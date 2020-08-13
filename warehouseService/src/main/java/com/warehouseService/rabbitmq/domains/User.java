@@ -47,8 +47,6 @@ public class User implements Serializable {
 
     private Short userStatus = 0;
 
-    private Long points = 0l;
-
     @ManyToMany
     @JoinTable
     private List<UserRole> userRoles;
@@ -126,13 +124,6 @@ public class User implements Serializable {
         this.userStatus = userStatus;
     }
 
-    public Long getPoints() {
-        return points;
-    }
-
-    public void setPoints(Long points) {
-        this.points = points;
-    }
 
     public List<UserRole> getUserRoles() {
         return userRoles;
