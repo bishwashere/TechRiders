@@ -18,8 +18,11 @@ public class CustomPermissionEvaluator implements PermissionEvaluator {
     @Autowired
     HttpServletRequest httpServletRequest;
 
+
     @Override
-    public boolean hasPermission(Authentication authentication, Object o, Object o1) {
+    public boolean hasPermission(Authentication authentication, Object target, Object permission) {
+
+        System.out.println(target);
 
         Map<String, ArrayList<String>> sessionRoles = (Map<String, ArrayList<String>>)((HttpSession) httpServletRequest.getSession()).getAttribute("permissions");
 
@@ -31,9 +34,9 @@ public class CustomPermissionEvaluator implements PermissionEvaluator {
         while (roleValues.hasNext()){
             String roleName = (String) roleValues.next();
             if(sessionRoles.containsKey(roleName)){
-                List<String> permission = (ArrayList<String>)sessionRoles.get(roleName);
-                System.out.println(o1);
-                if(permission.contains(o1)){
+                List<String> session_permission = (ArrayList<String>)sessionRoles.get(roleName);
+                System.out.println(permission);
+                if(session_permission.contains(permission)){
                     return true;
                 }
             }

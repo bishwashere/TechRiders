@@ -25,47 +25,56 @@ public class ContentController {
     @Autowired
     ContentService contentService;
 
-    @GetMapping(value = {"","/"})
-    public String index(Model model){
+    @GetMapping(value = {"", "/"})
+    public String index(Model model) {
         //Content content = new Content("aboutus","about us","Content Here");
         //contentService.save(content);
         List<Content> contents = contentService.getAllContents();
-        model.addAttribute("contents",contents);
+        model.addAttribute("contents", contents);
         return "admin/cms_list";
     }
+
     @GetMapping("/add")
-    public String getContent(@ModelAttribute("content")Content content){
+    public String getContent(@ModelAttribute("content") Content content) {
         return "admin/contentForm";
     }
-    @PostMapping("/add")
-    public String addContent(@Valid @ModelAttribute("content")Content content, BindingResult bindingResult, Model model){
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("content",content);
-            return "admin/contentForm";
-        }
-        else{
-            contentService.save(content);
 
-            List<Content> contents = contentService.getAllContents();
-            model.addAttribute("contents",contents);
-            return "admin/cms_list";
+    @PostMapping("/add")
+    public String addContent(@Valid @ModelAttribute("content") Content content, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("content", content);
+            return "admin/contentForm";
+        } else {
+            contentService.save(content);
+            return "redirect:/administration/cms-managent";
         }
 
     }
 
     @GetMapping(value = "/edit/{slug}")
-    public String editContent(@Valid @ModelAttribute("content")Content content, BindingResult bindingResult, @PathVariable("slug")String slug, Model model){
-            model.addAttribute("content",content);
-            Content a= contentService.find(slug);
-            model.addAttribute("content",a);
-            return "admin/editContentForm";
+    public String editContent(@Valid @ModelAttribute("content") Content content, BindingResult bindingResult, @PathVariable("slug") String slug, Model model) {
+        model.addAttribute("content", content);
+        Content a = contentService.findBySlug(slug);
+        model.addAttribute("content", a);
+        return "admin/editContentForm";
     }
+
+    @PostMapping(value = "/edit/{slug}")
+    public String editContentPost(@Valid @ModelAttribute("content") Content content, BindingResult bindingResult, @PathVariable("slug") String slug, Model model) {
+        if(bindingResult.hasErrors()){
+            return "admin/editContentForm";
+        }else{
+            contentService.save(content);
+            return "redirect:/administration/cms-managent";
+        }
+
+    }
+
     @GetMapping(value = "/delete/{slug}")
-    public String deleteContent(@PathVariable("slug")String slug,Model model){
-        contentService.delete(slug);
-        List<Content> contents = contentService.getAllContents();
-        model.addAttribute("contents",contents);
-        return "admin/cms_list";
+    public String deleteContent(@PathVariable("slug") String slug, Model model) {
+        contentService.deleteBySlug(slug);
+
+        return "redirect:/administration/cms-managent";
     }
 
 }

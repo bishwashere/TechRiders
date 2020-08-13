@@ -8,13 +8,14 @@ import java.util.List;
 
 public interface CategoryService {
 
-    @PreAuthorize("hasPermission(#id,'product-category-management')")
+    @PreAuthorize("hasPermission(#category,'product-category-management')")
     Category save(Category category);
 
-    @PreAuthorize("hasPermission(#id,'product-category-management')")
+    @PreAuthorize("hasPermission(#noArgs,'product-category-management')")
     List<Category> findAll();
 
     @PreAuthorize("hasPermission(#id,'product-category-management')")
     void delete(Integer id);
+
     Category findById(Integer id);
 }
