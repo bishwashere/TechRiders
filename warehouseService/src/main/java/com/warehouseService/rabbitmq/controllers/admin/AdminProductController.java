@@ -1,6 +1,5 @@
 package com.warehouseService.rabbitmq.controllers.admin;
 
-
 import com.warehouseService.rabbitmq.domains.Product;
 import com.warehouseService.rabbitmq.domains.User;
 import com.warehouseService.rabbitmq.helpers.MyHelper;
@@ -60,7 +59,7 @@ public class AdminProductController {
 
     @GetMapping(value = {"", "/"})
     public String index(Model model) {
-        model.addAttribute("products", productService.findAll());
+        model.addAttribute("products", productService.findAllByAddedBy(((User)model.getAttribute("seller")).getId()));
         return "admin/product_list";
     }
 
@@ -105,8 +104,8 @@ public class AdminProductController {
         } else {
 
             product.setAddedBy(((User)model.getAttribute("seller")).getId());
-
             productService.save(product);
+
             redirectAttributes.addFlashAttribute("success_msg", "Product has been created successfully.");
             return "redirect:/administration/product";
         }
@@ -121,7 +120,7 @@ public class AdminProductController {
         model.addAttribute("product", employeeOptional.get());
 
         model.addAttribute("categories", categoryService.findAll());
-        return "user/product_form";
+        return "admin/product_form";
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
@@ -138,14 +137,13 @@ public class AdminProductController {
                 product_file.transferTo(new File(rootDirectory + "/images/" + productName));
                 product.setProductImage(productName);
             } catch (Exception e) {
-
                 String localeMsg = messageSource.getMessage("unableToUpload", null, null, loc);
                 bindingResult.addError(new FieldError("product", "product_image", "", false, null, null, localeMsg));
             }
         }
         if (bindingResult.hasErrors()) {
             model.addAttribute("categories", categoryService.findAll());
-            return "user/product_form";
+            return "admin/product_form";
         }else{
             redirectAttributes.addFlashAttribute("success_msg", "Product has been created successfully.");
             product.setId(id);
