@@ -76,4 +76,13 @@ public class OrderedProduct implements Serializable {
     public void setProduct(Product product) {
         this.product = product;
     }
+    
+    @Override
+	public String toString() {
+		return "{" +
+	        "\'price\':\'" + getPrice() + "\'" +
+	        ", \'quantity\':\'" + getQty() + "\'" +
+	        ", \'tax\':\'" + getTax() + "\'" +
+        "}";
+	}
 }

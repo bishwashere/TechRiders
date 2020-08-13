@@ -146,7 +146,7 @@ public class ProductController {
             model.addAttribute("categories", categoryService.findAll());
             return "user/product_form";
         }else{
-            redirectAttributes.addFlashAttribute("success_msg", "Product has been created successfully.");
+            redirectAttributes.addFlashAttribute("success_msg", "Product has been updated successfully.");
             product.setId(id);
             productService.save(product);
 

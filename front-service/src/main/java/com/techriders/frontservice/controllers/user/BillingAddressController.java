@@ -13,11 +13,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
-@RequestMapping(value = "/buyer/address")
+@RequestMapping(value = "/account/address")
 public class BillingAddressController {
     @Autowired
     BillingAddressService billingAddressService;
@@ -27,7 +25,7 @@ public class BillingAddressController {
     public String billingAddressForm(@ModelAttribute("billingAddress") BillingAddress billingAddr,HttpSession session,RedirectAttributes redirectAttributes){
         if(session.getAttribute("cart_item") == null){
             redirectAttributes.addFlashAttribute("error_msg","Cart is empty.");
-            return "redirect:/buyer/cart-details";
+            return "redirect:/account/cart-details";
         }
         return "user/billingForm";
     }
@@ -43,7 +41,7 @@ public class BillingAddressController {
 //        user.setBillingAddress(billingAdres);
 //        userService.saveBillingAddressByID(billing.getId());
 //            redirectAttributes.addFlashAttribute(billingAddr);
-            return "redirect:/buyer/address/shipping";
+            return "redirect:/account/address/shipping";
         }
 
     }

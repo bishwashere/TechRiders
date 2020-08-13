@@ -1,6 +1,5 @@
 package com.techriders.frontservice.services;
 
-
 import com.techriders.frontservice.domains.User;
 
 import java.util.List;
@@ -15,8 +14,6 @@ public interface UserService {
     User FindById(Long id);
     boolean acceptById(Long id);
     boolean declinedById(Long id);
-
-    void addPointsById(Long id, Long points);
 
     User findById(long id);
 

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping(value = "/buyer/address/shipping")
+@RequestMapping(value = "/account/address/shipping")
 public class ShippingAddressController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class ShippingAddressController {
     public String shippingAddressForm(@ModelAttribute("shippingAddress") ShippingAddress shippingAddress, HttpSession session, RedirectAttributes redirectAttributes){
         if(session.getAttribute("cart_item") == null){
             redirectAttributes.addFlashAttribute("error_msg","Cart is empty.");
-            return "redirect:/buyer/cart-details";
+            return "redirect:/account/cart-details";
         }
         return "user/shippingForm";
     }
@@ -39,13 +39,13 @@ public class ShippingAddressController {
         if(result.hasErrors()){
             return "user/shippingForm";
         }else if(session.getAttribute("billingAddress")==null){
-            return "redirect:/buyer/address";
+            return "redirect:/account/address";
         }else{
             session.setAttribute("shippingAddress", shippingAddress);
 
             model.addAttribute("shippingAddress", shippingAddress);
 
-            return "redirect:/buyer/address/shipping/checkout-success";
+            return "redirect:/account/address/shipping/checkout-success";
         }
     }
     @PostMapping(value = "/get-billing")
@@ -56,7 +56,7 @@ public class ShippingAddressController {
     public String shippingAddressSuccess(Model model){
 
         model.addAttribute("allShippingAddress", shippingAddressService.getAllShippingAddress());
-        return "redirect:/buyer/payment_input";
+        return "redirect:/account/payment_input";
     }
     @GetMapping(value = {"/shippingAddressList"})
     public String shippingAddressList(Model model){

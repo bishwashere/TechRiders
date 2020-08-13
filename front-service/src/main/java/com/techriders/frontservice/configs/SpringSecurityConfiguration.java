@@ -3,6 +3,7 @@ package com.techriders.frontservice.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -29,10 +30,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     DataSource dataSource;
 
-    @Autowired
-    AuthSuccessHandler successHandler;
-
-
     @Bean
     SimpleUrlAuthenticationFailureHandler authFailureHandler(){
         return new SimpleUrlAuthenticationFailureHandler();
@@ -41,29 +38,19 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-//        auth.inMemoryAuthentication()
-//                .withUser("username").password("password").roles("SELLER")
-//                .and()
-//                .withUser("username").password("password").roles("BUYER")
-//                .and()
-//                .withUser("username").password("password").roles("ADMIN");
-
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery("select user_name, password,admin_verification from user where user_name = ?")
-                .authoritiesByUsernameQuery("select user_name, authority from authority where user_name = ?");
+                .authoritiesByUsernameQuery("select u.user_name, a.role_name from user u,user_role a,user_user_roles ug where (u.user_name = ? and ug.users_id = u.id and a.id = ug.user_roles_id and a.role_name = 'ROLE_BUYER')");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/administration","/administration/*","/administration/**").hasRole("ADMIN")
-                .antMatchers("/seller","/seller/*","/seller/**").hasRole("SELLER")
-                .antMatchers("/buyer","/buyer/*","/buyer/**").hasRole("BUYER")
-                .antMatchers("/","/database/**").permitAll()
+                .antMatchers("/account","/account/*","/account/**").hasRole("BUYER")
                 .and().formLogin().loginPage("/signin")
-                .successHandler(successHandler)
+                .defaultSuccessUrl("/")
                 .and()
                 .logout()
                 .logoutUrl("/logout")
@@ -81,4 +68,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
 //        return NoOpPasswordEncoder.getInstance();
     }
+
+
 }

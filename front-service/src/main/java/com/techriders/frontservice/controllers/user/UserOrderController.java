@@ -9,15 +9,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
-@RequestMapping("/buyer/account")
+@RequestMapping("/account")
 @Controller
 public class UserOrderController {
     @Autowired
     ProductOrderService productOrderService;
     @Autowired
     ProductService productService;
+
+    @RequestMapping(value = {"/order-history"})
+    public String getOrderHistory(Model model){
+        List<ProductOrder> productOrders= productOrderService.getAll();
+        model.addAttribute("productOrders",productOrders);
+        return "user/orderHistory";
+    }
 
     @RequestMapping(value = {"","/order"})
     public String getOrders(Model model, HttpSession session){

@@ -14,7 +14,7 @@
         <div class="container theme-header-top">
             <div class="col-sm-2 col-sm-text-center"><a href="/"><img th:src="@{/images/logo.jpg}"></a></div>
             <div class="col-sm-9">
-                <form action="/static">
+                <form action="/">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <div class="btn-group">
@@ -43,7 +43,7 @@
             </div>
             <div class="col-sm-1">
                 <div class="item-indicate">
-                    <a th:href="@{/buyer/cart-details}"><span class="glyphicon glyphicon-shopping-cart"></span>
+                    <a th:href="@{/account/cart-details}"><span class="glyphicon glyphicon-shopping-cart"></span>
                         <span class="item-count" th:text="${(session.cart_item != null)?session.cart_item.size():0}">0</span>
                     </a>
                 </div>
@@ -74,13 +74,13 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <span sec:authentication="name">John</span>
-                                    [<span sec:authorize="hasRole('ROLE_SELLER')"> seller </span><span sec:authorize="hasRole('ROLE_BUYER')"> buyer (<span th:text="${session.user_points}">0</span>) </span>]
+                                    [<span sec:authorize="hasRole('ROLE_SELLER')"> seller </span><span sec:authorize="hasRole('ROLE_BUYER')"> buyer</span>]
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li sec:authorize="hasRole('ROLE_SELLER')"><a href="#" th:href="@{/seller/account/order-list}">Order List</a></li>
                                     <li sec:authorize="hasRole('ROLE_SELLER')"><a href="#" th:href="@{/seller/product-list}" >Product List</a></li>
-                                    <li sec:authorize="hasRole('ROLE_BUYER')"><a href="#" th:href="@{/buyer/account/order-history}">Order History</a></li>
+                                    <li sec:authorize="hasRole('ROLE_BUYER')"><a href="#" th:href="@{/account/order-history}">Order History</a></li>
                                     <li><a href="#" th:href="@{/logout}">SignOut</a></li>
                                 </ul>
                             </li>
@@ -90,13 +90,9 @@
                                 <a href="/login" th:href="@{/signin}"><span class="fa fa-sign-in"></span> <span>Sign in</span></a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-user"></span> <span >Join Us</span> <span class="caret"></span>
+                                <a href="#" th:href="@{/signup}">
+                                    <span class="fa fa-user"></span> <span >Signup</span>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" th:href="@{/signup}">Signup as Buyer</a></li>
-                                    <li><a href="#" th:href="@{/signup-seller}">Signup as Seller</a></li>
-                                </ul>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
