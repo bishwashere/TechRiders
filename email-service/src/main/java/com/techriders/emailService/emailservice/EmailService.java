@@ -60,7 +60,6 @@ public class EmailService {
         context.setVariable("status", status);
 
 
-
         // Prepare message using a Spring helper
         final MimeMessage mimeMessage = this.mailSender.createMimeMessage();
         final MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");

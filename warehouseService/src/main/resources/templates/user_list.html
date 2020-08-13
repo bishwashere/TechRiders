@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}"
+>
+<head>
+    <title>Sample</title>
+    <!--    <link rel="stylesheet" >-->
+</head>
+<body>
+<div layout:fragment="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">User Management</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div th:if="${error_msg != null}">
+                <div class="alert alert-danger" role="alert" th:text="${error_msg}">Error message</div>
+            </div>
+            <div th:if="${success_msg != null}">
+                <div class="alert alert-success" role="alert" th:text="${success_msg}">Error message</div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody class="user-list">
+                <tr th:each="user,count :${users}" th:data-id="${user.id}">
+                    <td th:text="${count.index+1}"></td>
+                    <td th:text="${user.firstName}"></td>
+                    <td th:text="${user.lastName}">Description</td>
+                    <td th:text="${user.userRoles}">Description</td>
+                    <td th:if="${user.adminVerification == 0}" class="action">
+                        <a class="btn btn-xs btn-success accept-btn" th:data-id="${user.id}" th:href="@{/administration/users/edit/{id}(id=${user.id})}">Approve</a>
+                        <a class="btn btn-xs btn-danger decline-btn" th:data-id="${user.id}" th:href="@{/administration/users/delete/{id}(id=${user.id})}">Decline</a>
+                    </td>
+                    <td th:if="${user.adminVerification == 1}">
+                        <span class="text-success">Verified <i class="fa fa-check"></i></span>
+                    </td>
+                    <td th:if="${user.adminVerification == 2}">
+                        <span class="text-danger">Declined <i class="fa fa-times"></i></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="application/javascript" th:src="@{/js/user_list.js}"></script>
+</div>
+</body>
+</html>

@@ -2,16 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../front-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/FollowSellerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/FollowerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/StaticPagesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/CheckOut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../email-service/src/main/java/com/techriders/emailService/emailservice/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/java/com/techriders/emailService/emailservice/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/CheckOut.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/CheckOut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/AdminOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/AdminOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/AdminProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/AdminProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/ContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/admin/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/category_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/category_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/cms_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/contentForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editContentForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editOrderForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/layouts/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/orderForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/orderList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/sample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/user_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/orderForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/orderHistory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/product_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminOrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/AdminProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/ContentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/DashboardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/SignInController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/controllers/admin/UserController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +78,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.warehouseService.rabbitmq.controllers.admin" />
       <recent name="com.warehouseService.rabbitmq.repositories" />
@@ -64,11 +92,11 @@
       <recent name="com.warehouseService.rabbitmq.services" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/admin" />
       <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,49 +154,49 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597259128116" />
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597344244263">
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597345066003">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244263" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066003" />
     <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597344244261">
+    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597345066001">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244261" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066001" />
     <state width="1750" height="450" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597344244260">
+    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597345066000">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244260" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066000" />
     <state width="1750" height="450" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597344244262">
+    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597345066002">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244262" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066002" />
     <state width="1750" height="450" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716720" />
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597344244265">
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597345066006">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244265" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066006" />
     <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716723" />
-    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597344244264">
+    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597345066004">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244264" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066004" />
     <state width="1750" height="450" key="GridCell.Tab.1.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
-    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597344244263">
+    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597345066003">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244263" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066003" />
     <state width="1750" height="450" key="GridCell.Tab.1.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597344244265">
+    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597345066005">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244265" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066005" />
     <state width="1750" height="450" key="GridCell.Tab.1.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
-    <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597324098453">
+    <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597345057770">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="291" width="845" height="538" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1597324098453" />
+    <state x="473" y="291" width="845" height="538" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1597345057770" />
   </component>
 </project>
