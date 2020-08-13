@@ -6,7 +6,6 @@ insert into role_permission(id,name) values (1,'product-category-management');
 insert into role_permission(id,name) values (2,'product-management');
 insert into role_permission(id,name) values (3,'user-management');
 insert into role_permission(id,name) values (4,'order-management');
-insert into role_permission(id,name) values (5,'content-management');
 
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (1,1);
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (1,2);
@@ -14,7 +13,6 @@ insert into user_role_role_permissions(user_roles_id,role_permissions_id) values
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (2,1);
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (2,2);
 insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (2,4);
-insert into user_role_role_permissions(user_roles_id,role_permissions_id) values (1,5);
 
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (1,1, 'admin@gmail.com','Admin','','$2a$10$pz4xJn5hEFaxKCpJYdCIFeJgwtaqiJ24Th8bk0Lm2w2y.Db5Cslom','admin',1);
 insert into user_user_roles (users_id,user_roles_id) values (1,1);
