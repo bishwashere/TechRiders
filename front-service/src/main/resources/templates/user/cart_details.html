@@ -9,8 +9,8 @@
 </head>
 <body>
 <div id="main-content" layout:fragment="main-content">
-    <div class="container content form-userRole p-15">
-        <div class="row form-userRole">
+    <div class="container content form-group p-15">
+        <div class="row form-group">
             <div th:if="${error_msg != null}">
                 <div class="alert alert-danger" role="alert" th:text="${error_msg}">Error message</div>
             </div>
@@ -18,7 +18,7 @@
                 <div class="alert alert-success" role="alert" th:text="${success_msg}">Error message</div>
             </div>
         </div>
-        <div class="row item-box mt-15 form-userRole" style="padding: 15px;">
+        <div class="row item-box mt-15 form-group" style="padding: 15px;">
             <div class="col-lg-9">
                 <table class="table table-striped">
                     <thead>

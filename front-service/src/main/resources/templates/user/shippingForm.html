@@ -27,13 +27,13 @@
                     <p class="text-danger" th:errors="*{lastName}"></p>
                 </div>
             </div>
-            <div class="form-userRole">
+            <div class="form-group">
                 <label for="addressL1">Country/Region</label>
                 <input th:field="*{addressL1}" placeholder="Street Adress, PoBox, company name, c/o"
                        class="form-control" id="addressL1" aria-describedby="addressL1Help">
                 <p class="text-danger" th:errors="*{addressL1}"></p>
             </div>
-            <div class="form-userRole">
+            <div class="form-group">
                 <label for="addressL2">Address line 2</label>
                 <input th:field="*{addressL2}" class="form-control" id="addressL2" aria-describedby="addressL2Help"
                        placeholder="Appartment, building, suite, unit, floor, etc">
@@ -66,7 +66,7 @@
                     <p class="text-danger" th:errors="*{zipCode}"></p>
                 </div>
             </div>
-            <div class="form-userRole">
+            <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
                 <input th:field="*{phoneNumber}" class="form-control" id="phoneNumber"
                        aria-describedby="phoneNumberHelp" placeholder="Enter Phone number">
@@ -74,19 +74,19 @@
                 <small id="phoneHelp" class="form-text text-muted">May be used to assist delivery</small>
             </div>
             <h4>Add delivery instructions (optional)</h4>
-            <div class="form-userRole">
+            <div class="form-group">
                 <label for="extraInfo">Do we need additional instructions to find this address? </label>
                 <textarea id="extraInfo" th:field="*{extraInfo}" class="form-control is-invalid"
                           placeholder="Please enter extra information"></textarea>
                 <p class="text-danger" th:errors="*{extraInfo}"></p>
             </div>
-            <div class="form-check form-userRole">
+            <div class="form-check form-group">
                 <input type="checkbox" class="form-check-input" id="sameBilling">
                 <p class="text-danger" th:errors="*{sameBilling}"></p>
                 <label class="form-check-label" for="sameBilling">Do you want to use the same Shipping address as the
                     Billing address</label>
             </div>
-            <div class="form-userRole">
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary">Use this Address</button>
             </div>
 
