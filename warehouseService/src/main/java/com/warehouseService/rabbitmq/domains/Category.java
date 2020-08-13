@@ -1,8 +1,4 @@
-<<<<<<< HEAD:warehouseService/src/main/java/com/techriders/logisticservice/domains/Category.java
-package com.techriders.logisticservice.domains;
-=======
 package com.warehouseService.rabbitmq.domains;
->>>>>>> 74e49a5e86fbe11f21dd98e2f840978f217ebe7a:warehouseService/src/main/java/com/warehouseService/rabbitmq/domains/Category.java
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
