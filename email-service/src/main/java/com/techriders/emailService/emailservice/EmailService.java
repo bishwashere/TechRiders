@@ -60,13 +60,13 @@ public class EmailService {
         // Prepare message using a Spring helper
         final MimeMessage mimeMessage = this.mailSender.createMimeMessage();
         final MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");
-        message.setSubject("Sample Email");
+        message.setSubject("Tech Riders Order Details!!!");
 
         // could have CC, BCC, will also take an array of Strings
         message.setTo(recipientEmail);
 
         // Create the HTML body using Thymeleaf..template is sample.html
-        final String htmlContent = this.templateEngine.process("user/email/sample-email", context);
+        final String htmlContent = this.templateEngine.process("user/email/order-email", context);
         //final String htmlContent = messageContent;
 
         message.setText(htmlContent, true /* isHtml */);
