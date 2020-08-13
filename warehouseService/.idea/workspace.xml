@@ -2,31 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../email-service/src/test/java/com/techriders/emailService/EmailServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/test/java/com/techriders/emailService/EmailServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/static/css/sb-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/static/css/sb-admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/FollowSellerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/FollowerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/StaticPagesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/CheckOut.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/sb-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/sb-admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/icons.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/layouts/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sb-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sb-admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font-awesome/less/icons.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/layouts/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/CheckOut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/CheckOut.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,45 +126,45 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597259128116" />
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597324825815">
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597344244263">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825815" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244263" />
     <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597324825814">
+    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597344244261">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825814" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244261" />
     <state width="1750" height="450" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597324825813">
+    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597344244260">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825813" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244260" />
     <state width="1750" height="450" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597324825814">
+    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597344244262">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825814" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244262" />
     <state width="1750" height="450" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716720" />
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597324825818">
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597344244265">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825818" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244265" />
     <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716723" />
-    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597324825817">
+    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597344244264">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825817" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244264" />
     <state width="1750" height="450" key="GridCell.Tab.1.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
-    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597324825816">
+    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597344244263">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825816" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244263" />
     <state width="1750" height="450" key="GridCell.Tab.1.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597324825817">
+    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597344244265">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597324825817" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597344244265" />
     <state width="1750" height="450" key="GridCell.Tab.1.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
     <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597324098453">
       <screen x="0" y="0" width="1792" height="1120" />

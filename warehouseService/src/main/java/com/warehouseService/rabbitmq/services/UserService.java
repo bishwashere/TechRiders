@@ -14,7 +14,6 @@ public interface UserService {
     @PreAuthorize("hasPermission(#noArgs,'user-management')")
     List<User> findAll();
 
-
     User FindById(Long id);
 
     @PreAuthorize("hasPermission(#id,'user-management')")
