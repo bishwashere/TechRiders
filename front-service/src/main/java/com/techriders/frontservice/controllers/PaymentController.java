@@ -66,11 +66,17 @@ public class PaymentController {
                 return "redirect:/";
             }
 
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            User user = userService.findByUserName(authentication.getName());
+
+            billingAddress.setUser(user);
+            shippingAddress.setUser(user);
+
+
             billingAddress = billingAddressService.save(billingAddress);
             shippingAddress = shippingAddressService.save(shippingAddress);
 
-            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            User user = userService.findByUserName(authentication.getName());
+
 
             ProductOrder productOrder = new ProductOrder();
             productOrder.setTransactionId(MyHelper.getRandomInt());

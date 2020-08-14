@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}"
+>
+<head>
+    <title>TechRiders</title>
+    <!--    <link rel="stylesheet" >-->
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <p><i>These addresses can be used in shipping and billing addresses when you go to cart checkout.</i></p>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <a class="btn btn-success" th:href="@{/account/favourite-addr/add}">Add new address</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div th:if="${error_msg != null}">
+                <div class="alert alert-danger" role="alert" th:text="${error_msg}">Error message</div>
+            </div>
+            <div th:if="${success_msg != null}">
+                <div class="alert alert-success" role="alert" th:text="${success_msg}">Error message</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover product-table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Address Name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="address,count:${addresses}">
+
+                    <td th:text="${count.index+1}"/>
+                    <td th:text="${address.addressName}"/>
+                    <td>
+                        <a class="btn btn-primary btn-xs edit-btn" th:href="@{/account/favourite-addr/edit/{id}(id=${address.id})}"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-danger btn-xs delete-btn" th:href="@{/account/favourite-addr/delete/{id}(id=${address.id})}"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -2,51 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/configs/OrderStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/configs/OrderStatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/BillingAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/BillingAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/CartControllerRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/CartControllerRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/CartDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/CartDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/DashBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/DashBoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/ShippingAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/ShippingAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/user/UserOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/UserOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/repositories/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/repositories/ContentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/repositories/ContentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/services/impl/ContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/services/impl/ContentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/aboutUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/billingForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/billingForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/billingSuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/billingSuccess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/cart_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/cart_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/couponDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/couponDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/couponForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/couponForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/layouts/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/layouts/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/orderCompleted.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/orderCompleted.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/orderForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/orderForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/orderHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/orderHistory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/paymentForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/paymentForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/paymentSuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/paymentSuccess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/product_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/product_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/product_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/sample.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/shippingForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/shippingForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/shippingSuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/shippingSuccess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/show-product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/show-product-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/update_Billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/update_Billing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/update_Payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/update_Payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/user/update_Shipping.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/update_Shipping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/BillingAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/BillingAddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/ShippingAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/ShippingAddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/BillingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/ShippingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/ShippingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/billingForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/billingForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/shippingForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/shippingForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/BillingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/ShippingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/ShippingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,10 +124,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597299592379" />
-    <state x="709" y="272" key="#com.intellij.ide.util.MemberChooser" timestamp="1597277511094">
+    <state x="709" y="272" key="#com.intellij.ide.util.MemberChooser" timestamp="1597353129334">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="709" y="272" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1597277511094" />
+    <state x="709" y="272" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1597353129334" />
     <state x="619" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597244845226">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -164,45 +136,45 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597259128116" />
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597345066003">
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597352986413">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066003" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986413" />
     <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597345066001">
+    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597352986412">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066001" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986412" />
     <state width="1750" height="450" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597345066000">
+    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597352986411">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066000" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986411" />
     <state width="1750" height="450" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597345066002">
+    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597352986413">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066002" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986413" />
     <state width="1750" height="450" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716720" />
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597345066006">
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597352986416">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066006" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986416" />
     <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716723" />
-    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597345066004">
+    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597352986414">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066004" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986414" />
     <state width="1750" height="450" key="GridCell.Tab.1.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
-    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597345066003">
+    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597352986414">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066003" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986414" />
     <state width="1750" height="450" key="GridCell.Tab.1.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597345066005">
+    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597352986415">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597345066005" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597352986415" />
     <state width="1750" height="450" key="GridCell.Tab.1.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
     <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597345057770">
       <screen x="0" y="0" width="1792" height="1120" />

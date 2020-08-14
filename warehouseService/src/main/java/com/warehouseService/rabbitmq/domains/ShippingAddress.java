@@ -1,15 +1,12 @@
 package com.warehouseService.rabbitmq.domains;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
 public class ShippingAddress {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
@@ -35,6 +32,10 @@ public class ShippingAddress {
     @NotBlank
     private String zipCode;
 
+    @ManyToOne
+    @JoinColumn
+    private User user;
+
     @NotBlank
     private String phoneNumber;
 
@@ -44,7 +45,6 @@ public class ShippingAddress {
 
     public ShippingAddress() {
     }
-
     public Long getId() {
         return id;
     }
@@ -139,5 +139,13 @@ public class ShippingAddress {
 
     public void setSameBilling(boolean sameBilling) {
         this.sameBilling = sameBilling;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

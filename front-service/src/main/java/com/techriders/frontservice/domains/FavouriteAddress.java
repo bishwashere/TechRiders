@@ -1,20 +1,19 @@
 package com.techriders.frontservice.domains;
 
+import com.techriders.frontservice.domains.User;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-public class BillingAddress {
+public class FavouriteAddress {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
-    private String firstName;
-
-    @NotBlank
-    private String lastName;
+    private String addressName;
 
     @NotBlank
     private String addressL1;
@@ -41,18 +40,10 @@ public class BillingAddress {
     @Size(max = 20, min = 8)
     private String phoneNumber;
 
-    @ManyToOne
-    @JoinColumn
+    @OneToOne(fetch = FetchType.LAZY)
     private User user;
 
-    @Transient
-    private Boolean saveIntoFavouriteAddr;
-
-    //to specify wheather user is using favourite address or not
-    @Transient
-    private Long addr_id = 0l;
-
-    public BillingAddress() {
+    public FavouriteAddress() {
     }
 
     public Long getId() {
@@ -61,22 +52,6 @@ public class BillingAddress {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getAddressL1() {
@@ -143,19 +118,11 @@ public class BillingAddress {
         this.user = user;
     }
 
-    public Long getAddr_id() {
-        return addr_id;
+    public String getAddressName() {
+        return addressName;
     }
 
-    public void setAddr_id(Long addr_id) {
-        this.addr_id = addr_id;
-    }
-
-    public Boolean getSaveIntoFavouriteAddr() {
-        return saveIntoFavouriteAddr;
-    }
-
-    public void setSaveIntoFavouriteAddr(Boolean saveIntoFavouriteAddr) {
-        this.saveIntoFavouriteAddr = saveIntoFavouriteAddr;
+    public void setAddressName(String addressName) {
+        this.addressName = addressName;
     }
 }

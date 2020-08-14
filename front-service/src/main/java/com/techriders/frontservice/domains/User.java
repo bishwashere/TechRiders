@@ -49,13 +49,13 @@ public class User implements Serializable {
     @JoinTable
     private List<UserRole> userRoles;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<ShippingAddress> shippingAddress;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Payment> payment;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<BillingAddress> billingAddress;
 
     public Long getId() {

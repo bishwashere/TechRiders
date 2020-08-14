@@ -1,10 +1,15 @@
 package com.techriders.frontservice.controllers;
 
 import com.techriders.frontservice.domains.BillingAddress;
+import com.techriders.frontservice.domains.FavouriteAddress;
 import com.techriders.frontservice.domains.User;
+import com.techriders.frontservice.helpers.MyHelper;
 import com.techriders.frontservice.services.BillingAddressService;
+import com.techriders.frontservice.services.FavouriteAddressService;
 import com.techriders.frontservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,60 +24,55 @@ import javax.validation.Valid;
 public class BillingAddressController {
     @Autowired
     BillingAddressService billingAddressService;
+
+    @Autowired
     UserService userService;
-    User user;
+
+    @Autowired
+    FavouriteAddressService favouriteAddressService;
+
     @GetMapping(value = {"/",""})
-    public String billingAddressForm(@ModelAttribute("billingAddress") BillingAddress billingAddr,HttpSession session,RedirectAttributes redirectAttributes){
+    public String billingAddressForm(@ModelAttribute("billingAddress") BillingAddress billingAddr,HttpSession session,Model model,RedirectAttributes redirectAttributes){
         if(session.getAttribute("cart_item") == null){
             redirectAttributes.addFlashAttribute("error_msg","Cart is empty.");
             return "redirect:/account/cart-details";
         }
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findByUserName(authentication.getName());
+
+        model.addAttribute("favouriteAddressService",favouriteAddressService.findAllByUser(user));
+
         return "/billingForm";
     }
     @PostMapping(value = {"/",""})
-    public String saveBillingAddress(@Valid @ModelAttribute("billingAddress") BillingAddress billingAddr, BindingResult result, Model model, HttpSession session){
+    public String saveBillingAddress(@ModelAttribute("favouriteAddress") FavouriteAddress favouriteAddress,@Valid @ModelAttribute("billingAddress") BillingAddress billingAddress, BindingResult result,Model model, HttpSession session){
         if(result.hasErrors()){
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            User user = userService.findByUserName(authentication.getName());
+            model.addAttribute("favouriteAddressService",favouriteAddressService.findAllByUser(user));
             return "/billingForm";
         }else{
-            session.setAttribute("billingAddress", billingAddr);
-//            billingAddressService.save(billingAddr);
-//        List<BillingAddress> billingAdres = new ArrayList<BillingAddress>();
-//        billingAdres.add(billing);
-//        user.setBillingAddress(billingAdres);
-//        userService.saveBillingAddressByID(billing.getId());
-//            redirectAttributes.addFlashAttribute(billingAddr);
+
+            if(billingAddress.getSaveIntoFavouriteAddr() == true){
+
+                if(billingAddress.getAddr_id()>0){
+                    favouriteAddress.setId(billingAddress.getAddr_id());
+                    FavouriteAddress favouriteAddress1 = favouriteAddressService.findById(billingAddress.getAddr_id());
+                    favouriteAddress.setAddressName(favouriteAddress1.getAddressName());
+                }else{
+                    favouriteAddress.setAddressName("Address "+MyHelper.getRandomInt());
+                }
+                Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                User user = userService.findByUserName(authentication.getName());
+                favouriteAddress.setUser(user);
+
+                favouriteAddressService.save(favouriteAddress);
+            }
+
+            session.setAttribute("billingAddress", billingAddress);
+            
             return "redirect:/account/address/shipping";
         }
 
-    }
-
-    @GetMapping(value = {"/billingList"})
-    public String billingAddressList(Model model){
-        model.addAttribute("allBillingAddress", billingAddressService.getAllBillingAddress());
-        return "/billingSuccess";
-    }
-    @GetMapping("/edit/{id}")
-    public String showUpdateForm(@PathVariable("id") long id, Model model) {
-        BillingAddress billing = billingAddressService.findById(id);
-
-        model.addAttribute("billingAddressUpdate", billing);
-        return "/update_Billing";
-    }
-    @PostMapping(value={"/edit/update/{id}"})
-    public String updateBillingAddress(@PathVariable("id") long id, BillingAddress billing, BindingResult result, Model model){
-        if(result.hasErrors()){
-            billing.setId(id);
-            return "/update_Billing";
-        }
-        billingAddressService.save(billing);
-        model.addAttribute("allBillingAddress",billingAddressService.getAllBillingAddress());
-        return "/billingSuccess";
-    }
-    @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable("id") long id, BillingAddress billing, Model model) {
-        billing = billingAddressService.findById(id);
-        billingAddressService.delete(billing);
-        model.addAttribute("allBillingAddress", billingAddressService.getAllBillingAddress());
-        return "/billingSuccess";
     }
 }

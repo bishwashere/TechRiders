@@ -2,10 +2,17 @@ package com.techriders.frontservice.controllers;
 
 
 import com.techriders.frontservice.domains.BillingAddress;
+import com.techriders.frontservice.domains.FavouriteAddress;
 import com.techriders.frontservice.domains.ShippingAddress;
+import com.techriders.frontservice.domains.User;
+import com.techriders.frontservice.helpers.MyHelper;
 import com.techriders.frontservice.services.BillingAddressService;
+import com.techriders.frontservice.services.FavouriteAddressService;
 import com.techriders.frontservice.services.ShippingAddressService;
+import com.techriders.frontservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,21 +32,50 @@ public class ShippingAddressController {
     @Autowired
     BillingAddressService billingAddressService;
 
+    @Autowired
+    UserService userService;
+
+    @Autowired
+    FavouriteAddressService favouriteAddressService;
+
     @GetMapping(value = {"/",""})
-    public String shippingAddressForm(@ModelAttribute("shippingAddress") ShippingAddress shippingAddress, HttpSession session, RedirectAttributes redirectAttributes){
+    public String shippingAddressForm(@ModelAttribute("shippingAddress") ShippingAddress shippingAddress, HttpSession session, RedirectAttributes redirectAttributes,Model model){
         if(session.getAttribute("cart_item") == null){
             redirectAttributes.addFlashAttribute("error_msg","Cart is empty.");
             return "redirect:/account/cart-details";
         }
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findByUserName(authentication.getName());
+
+        model.addAttribute("favouriteAddressService",favouriteAddressService.findAllByUser(user));
         return "/shippingForm";
     }
     @PostMapping(value = {"/",""})
-    public String saveShippingAddress(@Valid  @ModelAttribute("shippingAddress") ShippingAddress shippingAddress,BindingResult result,HttpSession session, Model model){
+    public String saveShippingAddress(@ModelAttribute("favouriteAddress") FavouriteAddress favouriteAddress,@Valid  @ModelAttribute("shippingAddress") ShippingAddress shippingAddress, BindingResult result, HttpSession session, Model model){
         if(result.hasErrors()){
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            User user = userService.findByUserName(authentication.getName());
+
+            model.addAttribute("favouriteAddressService",favouriteAddressService.findAllByUser(user));
             return "/shippingForm";
         }else if(session.getAttribute("billingAddress")==null){
             return "redirect:/account/address";
         }else{
+            if(shippingAddress.getSaveIntoFavouriteAddr() == true){
+
+                if(shippingAddress.getAddr_id()>0){
+                    favouriteAddress.setId(shippingAddress.getAddr_id());
+                    FavouriteAddress favouriteAddress1 = favouriteAddressService.findById(shippingAddress.getAddr_id());
+                    favouriteAddress.setAddressName(favouriteAddress1.getAddressName());
+                }else{
+                    favouriteAddress.setAddressName("Address "+MyHelper.getRandomInt());
+                }
+                Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                User user = userService.findByUserName(authentication.getName());
+                favouriteAddress.setUser(user);
+
+                favouriteAddressService.save(favouriteAddress);
+            }
             session.setAttribute("shippingAddress", shippingAddress);
 
             model.addAttribute("shippingAddress", shippingAddress);
@@ -56,34 +92,5 @@ public class ShippingAddressController {
 
         model.addAttribute("allShippingAddress", shippingAddressService.getAllShippingAddress());
         return "redirect:/account/payment_input";
-    }
-    @GetMapping(value = {"/shippingAddressList"})
-    public String shippingAddressList(Model model){
-        model.addAttribute("allShippingAddress", shippingAddressService.getAllShippingAddress());
-        return "/shippingSuccess";
-    }
-    @GetMapping("/editShipping/{id}")
-    public String showUpdateForm(@PathVariable("id") long id, Model model) {
-        ShippingAddress shipping = shippingAddressService.findById(id);
-
-        model.addAttribute("shippingAddressUpdate", shipping);
-        return "/update_Shipping";
-    }
-    @PostMapping(value={"/editShipping/update/{id}"})
-    public String updateShippingAddress(@PathVariable("id") long id, ShippingAddress shipping, BindingResult result, Model model){
-        if(result.hasErrors()){
-            shipping.setId(id);
-            return "/update_Shipping";
-        }
-        shippingAddressService.save(shipping);
-        model.addAttribute("allShippingAddress",shippingAddressService.getAllShippingAddress());
-        return "/shippingSuccess";
-    }
-    @GetMapping("/deleteShipping/{id}")
-    public String deleteShipping(@PathVariable("id") long id, ShippingAddress shipping, Model model) {
-        shipping= shippingAddressService.findById(id);
-        shippingAddressService.delete(shipping);
-        model.addAttribute("allShippingAddress", shippingAddressService.getAllShippingAddress());
-        return "/shippingSuccess";
     }
 }
