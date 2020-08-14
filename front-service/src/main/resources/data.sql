@@ -27,6 +27,9 @@ insert into user_user_roles (users_id,user_roles_id) values (3,2);
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (4,1, 'bishwas.scholar@gmail.com','Buyer','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer',1);
 insert into user_user_roles (users_id,user_roles_id) values (4,3);
 
+insert into user_user_roles (users_id,user_roles_id) values (4,3);
+insert into favourite_address (id,addressl1,addressl2,address_name,city,country,phone_number,state,zip_code,user_id) values (1,'1000N','4th street','Office Address','Fairfield','United States','56789986543','IA','52557',4);
+
 insert into user (id,admin_verification, email, first_name, last_name, password, user_name, user_status) values (5,1, 'buyer2@gmail.com','Buyer2','','$2a$10$cwBCBwwMCzhOYqJp5Eioo./KN0jJYkQVOL/2ndZwNKzSqE6jgbDzO','buyer2',1);
 insert into user_user_roles (users_id,user_roles_id) values (5,3);
 

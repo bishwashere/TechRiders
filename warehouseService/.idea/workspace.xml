@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/BillingAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/BillingAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/ShippingAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/controllers/ShippingAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/BillingAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/ShippingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/ShippingAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/domains/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/billingForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/billingForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/layouts/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/shippingForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/shippingForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/BillingAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/ShippingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/ShippingAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/domains/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/BillingAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
