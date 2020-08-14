@@ -4,13 +4,10 @@ package com.warehouseService.rabbitmq.controllers;
 import com.warehouseService.rabbitmq.domains.User;
 import com.warehouseService.rabbitmq.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.security.access.prepost.PreAuthorize;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.NoSuchElementException;
 
 @Controller
@@ -47,7 +44,6 @@ public class UserController {
     public @ResponseBody
     boolean declinetUser(@PathVariable("id") long id) {
         try {
-            SimpleMailMessage mail = new SimpleMailMessage();
 
             User user = userService.findById(id);
 

@@ -15,13 +15,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-@EnableSwagger2
 public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
