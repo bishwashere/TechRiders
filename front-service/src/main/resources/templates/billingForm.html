@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container">
+        <!--/*@thymesVar id="billingAddress" type=""*/-->
+        <form th:action="@{/account/address}" th:object="${billingAddress}" method="post">
+            <h2 class="mb-3">Billing address</h2>
+            <div class="row" th:if="${favouriteAddressService != null}">
+                <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                        <select class="form-control" name="favourites">
+                            <option value="">Choose Favourite Address</option>
+                            <option th:each="faddr:${favouriteAddressService}" th:value="${faddr.id}" th:text="${faddr.addressName}">Address</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input th:field="*{firstName}" class="form-control" id="firstName" aria-describedby="firstNameHelp"
+                               placeholder="Enter first Name">
+                        <p th:errors="*{firstName}" class="text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="country">Last Name</label>
+                        <input th:field="*{lastName}" class="form-control" id="lastName" aria-describedby="lastNameHelp"
+                               placeholder="Enter Last Name">
+                        <p th:errors="*{lastName}" class="text-danger"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="addressL1">Address Line 1</label>
+                <input th:field="*{addressL1}" placeholder="Street Adress, PoBox, company name, c/o"
+                       class="form-control" id="addressL1" aria-describedby="addressL1Help">
+                <p th:errors="*{addressL1}" class="text-danger"></p>
+            </div>
+            <div class="form-group">
+                <label for="addressL2">Address line 2</label>
+                <input th:field="*{addressL2}" class="form-control" id="addressL2" aria-describedby="addressL2Help"
+                       placeholder="Appartment, building, suite, unit, floor, etc">
+                <p th:errors="*{addressL2}" class="text-danger"></p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="form-group">
+                        <label for="country">Country/Region</label>
+                        <input th:field="*{country}" class="form-control" id="country" aria-describedby="countryHelp"
+                               placeholder="Enter Country/Region">
+                        <p th:errors="*{country}" class="text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input th:field="*{city}" class="form-control" id="city" aria-describedby="cityHelp"
+                               placeholder="Enter City">
+                        <p th:errors="*{city}" class="text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="form-group">
+                        <label for="state">State / Province / Region</label>
+                        <input th:field="*{state}" class="form-control" id="state" aria-describedby="stateHelp"
+                               placeholder="Enter State">
+                        <p th:errors="*{state}" class="text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="form-group">
+                        <label for="zipCode">Zip Code</label>
+                        <input th:field="*{zipCode}" class="form-control" id="zipCode" aria-describedby="zipCodeHelp"
+                               placeholder="Enter Zip Code">
+                        <p th:errors="*{zipCode}" class="text-danger"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input th:field="*{phoneNumber}" class="form-control" id="phoneNumber"
+                           aria-describedby="phoneNumberHelp" placeholder="Enter Phone number">
+                    <p th:errors="*{phoneNumber}" class="text-danger"></p>
+                    <small id="phoneHelp" class="form-text text-muted">May be used to assist delivery</small>
+                </div>
+            </div>
+            <input th:field="*{addr_id}" type="hidden">
+            <div class="form-group">
+                <input type="checkbox" th:field="*{saveIntoFavouriteAddr}" class="want-to-save" id="saveIntoFavouriteAddr">
+                <p class="text-danger" th:errors="*{saveIntoFavouriteAddr}"></p>
+                <label class="form-check-label" for="saveIntoFavouriteAddr">Do you want to save this address in favourite address too.</label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Continue</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

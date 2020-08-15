@@ -15,8 +15,6 @@ public interface UserService {
     boolean acceptById(Long id);
     boolean declinedById(Long id);
 
-    void addPointsById(Long id, Long points);
-
     User findById(long id);
 
     List<User> findTop10ByFirstName(String firstName);

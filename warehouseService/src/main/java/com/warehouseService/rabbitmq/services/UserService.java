@@ -11,9 +11,8 @@ public interface UserService {
     User findByEmail(String email);
     User findByUserName(String username);
 
-    @PreAuthorize("hasPermission(#id,'user-management')")
+    @PreAuthorize("hasPermission(#noArgs,'user-management')")
     List<User> findAll();
-
 
     User FindById(Long id);
 
@@ -23,10 +22,9 @@ public interface UserService {
     @PreAuthorize("hasPermission(#id,'user-management')")
     boolean declinedById(Long id);
 
-    void addPointsById(Long id, Long points);
 
     User findById(long id);
 
-    @PreAuthorize("hasPermission(#id,'user-management')")
+    @PreAuthorize("hasPermission(#firstName,'user-management')")
     List<User> findTop10ByFirstName(String firstName);
 }

@@ -1,9 +1,6 @@
 package com.techriders.frontservice.domains;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
@@ -35,12 +32,24 @@ public class ShippingAddress {
     @NotBlank
     private String zipCode;
 
+    @ManyToOne
+    @JoinColumn
+    private User user;
+
     @NotBlank
     private String phoneNumber;
 
     private String extraInfo;
 
+    @Transient
     private boolean sameBilling;
+
+    @Transient
+    private Boolean saveIntoFavouriteAddr;
+
+    //to specify wheather user is using favourite address or not
+    @Transient
+    private Long addr_id = 0l;
 
     public ShippingAddress() {
     }
@@ -139,5 +148,29 @@ public class ShippingAddress {
 
     public void setSameBilling(boolean sameBilling) {
         this.sameBilling = sameBilling;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Long getAddr_id() {
+        return addr_id;
+    }
+
+    public void setAddr_id(Long addr_id) {
+        this.addr_id = addr_id;
+    }
+
+    public Boolean getSaveIntoFavouriteAddr() {
+        return saveIntoFavouriteAddr;
+    }
+
+    public void setSaveIntoFavouriteAddr(Boolean saveIntoFavouriteAddr) {
+        this.saveIntoFavouriteAddr = saveIntoFavouriteAddr;
     }
 }

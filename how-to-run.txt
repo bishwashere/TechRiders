@@ -1,0 +1,34 @@
+How to run the application correctly:
+
+Database name: techriders
+
+For startup and placing order:
+	Step 1: Create new database with name: techriders. Command: create database techriders;
+	Step 2: Start "front-controller" first. This sets up default values to run the application.
+	Step 3: Start "warehouseservice" and "emailservice" in any order.
+	Step 4: Go to browser: localhost:8081
+	Step 5: Click "Sign In" on top left and login with username: buyer and password: buyer
+	Step 6: Hover over any product and click on "Add to card".
+	Step 7: Go to top left corner, cart icon, click on it.
+	Step 8: Click on "Proceed to checkout".
+	Step 9: Fill the form for Billing Address. Click on "Save and Continue".
+	Step 10: Click on checkbox near the bottom btton that says "Do you want to use the same Shipping..."
+	Step 11: Click on "Use this Address".
+	Step 12: In the Payment Method page, enter random numbers, select one of the card type and click on "Submit".
+	Step 12: Congrats!!! An order is placed and an e-mail is on the way about your order.
+
+For Warehouse:
+	Step 1: Go to browser: localhost:8083
+	Step 2: Login with username: seller and password: seller
+	Step 3: Click on "Order Management" and click on "New Orders".
+	Step 4: Under "Order Status" you can click on either "Fulfill" or "Declined".
+	>> An e-mail will be sent about this order status change.
+	Step 5: Click on "Order Managment" and click on "Accepted Orders".
+	Step 6: You can click on "Mark On the Way".
+	>> An e-mail will be sent about this order status change.
+	Step 7: Click on "Order Managment" and click on "Shipped Orders".
+	Step 8: Click on "Mark Delivered".
+	>> An e-mail will be sent about this order status change.
+	Step 9: Under "Order Management" you can click as required on: "Accepted Order" or "Shipped Order" or "Delivered Order" or Rejected Order".
+
+Thats it!!! You have successfully executed all the features we implemented.

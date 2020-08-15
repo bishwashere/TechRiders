@@ -98,6 +98,39 @@ $(function () {
             $("#shipping-addr-form")[0].reset();
         }
 
+    })
 
+    $('[name="favourites"]').on("change",function () {
+        if($(this).val()){
+            var value = $(this).val();
+            $.ajax({
+                url:"/account/favourite-addr/get/"+value,
+                dataType:"json",
+                type:"get",
+                contentType:"application/json"
+            }).done(function (response){
+                for(key in response){
+
+                    if(key == 'id'){
+                        $('[name="addr_id"]').val(response[key]);
+                    }else{
+                        $('[name="'+key+'"]').val(response[key]);
+                    }
+
+                }
+            })
+        }else{
+            $("#shipping-addr-form")[0].reset();
+            $("#billing-addr-form")[0].reset();
+            $('[name="addr_id"]').val("");
+        }
+
+    })
+    $('.want-to-save').on("click",function (e) {
+        if($(this).is(":checked")){
+
+        }else{
+
+        }
     })
 })

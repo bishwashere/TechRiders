@@ -42,7 +42,15 @@ public class BillingAddress {
     private String phoneNumber;
 
     @ManyToOne
+    @JoinColumn
     private User user;
+
+    @Transient
+    private Boolean saveIntoFavouriteAddr;
+
+    //to specify wheather user is using favourite address or not
+    @Transient
+    private Long addr_id = 0l;
 
     public BillingAddress() {
     }
@@ -133,5 +141,21 @@ public class BillingAddress {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Long getAddr_id() {
+        return addr_id;
+    }
+
+    public void setAddr_id(Long addr_id) {
+        this.addr_id = addr_id;
+    }
+
+    public Boolean getSaveIntoFavouriteAddr() {
+        return saveIntoFavouriteAddr;
+    }
+
+    public void setSaveIntoFavouriteAddr(Boolean saveIntoFavouriteAddr) {
+        this.saveIntoFavouriteAddr = saveIntoFavouriteAddr;
     }
 }

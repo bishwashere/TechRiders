@@ -63,7 +63,7 @@ public class WarehouseServiceApplication {
     return new MessageListenerAdapter(receiver, "receiveMessage");
   }
 
-  public static void main(String[] args) throws InterruptedException {
+  public static void main(String[] args) {
 //    SpringApplication.run(WarehouseServiceApplication.class, args).close();
     SpringApplication.run(WarehouseServiceApplication.class, args);
   }

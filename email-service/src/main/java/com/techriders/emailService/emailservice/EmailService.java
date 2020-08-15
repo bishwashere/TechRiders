@@ -47,7 +47,7 @@ public class EmailService {
         String billingAddress = actualObj.get("billingAddress").asText();
         String shippingAddress = actualObj.get("shippingAddress").asText();
         String status = actualObj.get("orderStatus").asText();
-
+        if(status.equals("ON_THE_WAY")) status="ON THE WAY";
 
 
         // Prepare the Thymeleaf evaluation context
@@ -58,7 +58,6 @@ public class EmailService {
         context.setVariable("billingAddress", billingAddress);
         context.setVariable("shippingAddress", shippingAddress);
         context.setVariable("status", status);
-
 
 
         // Prepare message using a Spring helper

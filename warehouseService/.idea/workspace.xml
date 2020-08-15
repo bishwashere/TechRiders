@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../email-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fwEt1cbx4Qxk3NUK9Nfa6TpDA5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.warehouseService.rabbitmq.controllers.admin" />
+      <recent name="com.warehouseService.rabbitmq.repositories" />
+      <recent name="com.warehouseService.rabbitmq.domains" />
+      <recent name="com.warehouseService.rabbitmq.services.impl" />
+      <recent name="com.warehouseService.rabbitmq.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/admin" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/services/impl" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WarehouseServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="warehouseService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.warehouseService.rabbitmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.warehouseService.rabbitmq.WarehouseServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WarehouseServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="" />
+      <created>1597120965611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597120965611</updated>
+      <workItem from="1597120967012" duration="25254000" />
+      <workItem from="1597258110328" duration="24454000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="360" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597299592379">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="360" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597299592379" />
+    <state x="709" y="272" key="#com.intellij.ide.util.MemberChooser" timestamp="1597353129334">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="709" y="272" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1597353129334" />
+    <state x="619" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597244845226">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="619" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597244845226" />
+    <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597259128116">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597259128116" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597460078558">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078558" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597460078557">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078557" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597460078556">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078556" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597460078558">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078558" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716720" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597460078561">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078561" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716723" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597460078560">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078560" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597460078559">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078559" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597460078560">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597460078560" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
+    <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597345057770">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="473" y="291" width="845" height="538" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1597345057770" />
+    <state x="273" y="265" key="new project wizard" timestamp="1597429452217">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="273" y="265" key="new project wizard/0.0.1792.1120@0.0.1792.1120" timestamp="1597429452217" />
+  </component>
+</project>

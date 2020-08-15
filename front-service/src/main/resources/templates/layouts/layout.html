@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>TechRiders</title>
+    <link rel="stylesheet" href="" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="" th:href="@{/font-awesome/css/font-awesome.css}"/>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <!--    <link rel="stylesheet" >-->
+</head>
+<body>
+<nav th:replace="/layouts/header::header-navbar"></nav>
+<div id="main-content" layout:fragment="main-content" class="container content p-15">
+    This content will be replaced if the page using the layout also defines a layout:fragment="content" segment.
+</div>
+<div th:replace="/layouts/footer :: footer-menu"></div>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

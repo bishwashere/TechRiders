@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{/layouts/layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Update Shipping Address</title>
+</head>
+<body>
+<div id="main-content" layout:fragment="main-content">
+    <div class="container">
+        <h2>Update Shipping Address</h2>
+        <!--/*@thymesVar id="billingAddressUpdate" type=""*/-->
+        <form th:action= "@{update/{id}(id=${shippingAddressUpdate.id})}" th:object="${shippingAddressUpdate}" method="post">
+            <h2 class="mb-3">Shipping address</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input th:field="*{firstName}" class="form-control" id="firstName" aria-describedby="firstNameHelp" placeholder="Enter first Name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="country">Last Name</label>
+                    <input th:field="*{lastName}" class="form-control" id="lastName" aria-describedby="lastNameHelp" placeholder="Enter Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="addressL1">Country/Region</label>
+                <input th:field="*{addressL1}" placeholder="Street Adress, PoBox, company name, c/o" class="form-control" id="addressL1" aria-describedby="addressL1Help">
+            </div>
+            <div class="form-group">
+                <label for="addressL2">Address line 2</label>
+                <input th:field="*{addressL2}" class="form-control" id="addressL2" aria-describedby="addressL2Help" placeholder="Appartment, building, suite, unit, floor, etc">
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="country">Country/Region</label>
+                    <input th:field="*{country}" class="form-control" id="country" aria-describedby="countryHelp" placeholder="Enter Country/Region">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="city">City</label>
+                    <input th:field="*{city}" class="form-control" id="city" aria-describedby="cityHelp" placeholder="Enter City">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="state">State / Province / Region</label>
+                    <input th:field="*{state}" class="form-control" id="state" aria-describedby="stateHelp" placeholder="Enter State">
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="zipCode">Zip Code</label>
+                    <input th:field="*{zipCode}" class="form-control" id="zipCode" aria-describedby="zipCodeHelp" placeholder="Enter Zip Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input th:field="*{phoneNumber}" class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp" placeholder="Enter Phone number">
+                <small id="phoneHelp" class="form-text text-muted">May be used to assist delivery</small>
+            </div>
+            <h4>Add delivery instructions (optional)</h4>
+            <div class="form-group">
+
+                <label for="extraInfo">Do we need additional instructions to find this address? </label>
+                <textarea id="extraInfo" th:field="*{extraInfo}" class="form-control is-invalid" placeholder="Please enter extra information"></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="sameBilling">
+                <label class="form-check-label" for="sameBilling">Do you want to use the same Billing address as the shipping address</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

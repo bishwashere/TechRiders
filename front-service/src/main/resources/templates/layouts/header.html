@@ -1,0 +1,103 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<nav th:fragment="header-navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="" style="padding-top: 20px">
+        <div class="container theme-header-top">
+            <div class="col-sm-2 col-sm-text-center"><a href="/"><img th:src="@{/images/logo.png}"></a></div>
+            <div class="col-sm-9">
+                <form action="/" class="set-at-middle">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                    <span >Search Options</span> <span
+                                        class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu criteria" role="menu">
+                                    <li>
+                                        <label><input type="radio" name="priceSort" value="asc"> <span >Price Low To High</span> </label>
+                                    </li>
+                                    <li>
+                                        <label><input type="radio" name="priceSort" value="desc"> <span >Price High To Low</span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="text" name="param" class="form-control" placeholder="Search By Name">
+                        <span class="input-group-addon theme-input-group-addon">
+                            <button type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-1">
+                <div class="item-indicate set-at-middle">
+                    <a th:href="@{/account/cart-details}"><span class="glyphicon glyphicon-shopping-cart"></span>
+                        <span class="item-count" th:text="${(session.cart_item != null)?session.cart_item.size():0}">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid theme-header-top-second">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand active" href="/"><span class="fa fa-home"></span> <span >Home</span> </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/page/about-us"><span class="fa fa-info-circle"></span> <span>About Us</span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span sec:authentication="name">John</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" th:href="@{/account/favourite-addr}">Favourite Address</a></li>
+                                    <li><a href="#" th:href="@{/account/order-history}">Order History</a></li>
+                                    <li><a href="#" th:href="@{/logout}">SignOut</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul sec:authorize="!isAuthenticated()" class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="/login" th:href="@{/signin}"><span class="fa fa-sign-in"></span> <span>Sign in</span></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" th:href="@{/signup}">
+                                    <span class="fa fa-user"></span> <span >Signup</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+</body>
+</html>

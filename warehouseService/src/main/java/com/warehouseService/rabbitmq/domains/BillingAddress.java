@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class BillingAddress {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
@@ -42,6 +42,7 @@ public class BillingAddress {
     private String phoneNumber;
 
     @ManyToOne
+    @JoinColumn
     private User user;
 
     public BillingAddress() {
@@ -134,4 +135,5 @@ public class BillingAddress {
     public void setUser(User user) {
         this.user = user;
     }
+
 }

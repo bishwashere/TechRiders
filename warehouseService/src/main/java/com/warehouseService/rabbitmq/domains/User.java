@@ -47,19 +47,17 @@ public class User implements Serializable {
 
     private Short userStatus = 0;
 
-    private Long points = 0l;
-
     @ManyToMany
     @JoinTable
     private List<UserRole> userRoles;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<ShippingAddress> shippingAddress;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Payment> payment;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<BillingAddress> billingAddress;
 
     public Long getId() {
@@ -126,13 +124,6 @@ public class User implements Serializable {
         this.userStatus = userStatus;
     }
 
-    public Long getPoints() {
-        return points;
-    }
-
-    public void setPoints(Long points) {
-        this.points = points;
-    }
 
     public List<UserRole> getUserRoles() {
         return userRoles;

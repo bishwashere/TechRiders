@@ -7,12 +7,14 @@
 }
 
 .theme-header-top img {
-    height: 48px;
+    height: 89px;
 }
-
+.theme-header-top *{
+    color: #000000;
+}
 .theme-header-top .glyphicon-shopping-cart {
     font-size: 30px;
-    color: #919191;
+    color: #000000;
 }
 
 .theme-header-top .item-count {
@@ -35,7 +37,7 @@
 }
 
 .theme-header-top-second {
-    background: #4acee0;
+    background: #000;
 }
 
 .theme-header-top-second a {
@@ -55,11 +57,11 @@
 }
 
 .content {
-    margin-top: 128px;
+    margin-top: 170px;
 }
 
 .theme-footer {
-    background: #39737b;
+    background: #000;
 
 }
 
@@ -143,10 +145,23 @@
     margin: auto;
     display: none;
     opacity: 0.95;
+    background: #000;
+    border-color: #000000;
+}
+#main-content .btn-info{
+    background: #000;
+    border-color: #000000;
 }
 
 .item-box:hover .add-to-cart-btn {
     display: block;
+    background: #000;
+    border-color: #000000;
+
+}
+.add-to-cart-btn:focus{
+    background: #000;
+    border-color: #000000;
 }
 
 .check-icon {
@@ -195,4 +210,7 @@
 .small-middle-container{
     margin: auto;
     width: 40%;
+}
+.set-at-middle{
+    margin-top: 20px;
 }

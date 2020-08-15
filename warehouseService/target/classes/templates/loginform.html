@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title>TechRiders SignIn</title>
+    <!--    <link rel="stylesheet" >-->
+    <link rel="stylesheet" href="" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" href="" th:href="@{/font-awesome/css/font-awesome.css}"/>
+</head>
+<body>
+<div id="main-content" >
+    <div class="container content p-15">
+        <div class="mt-80 mb-120 row" style="margin-top: 100px">
+            <form class="col-md-offset-4 col-md-4" action="/" method="post">
+                <div class="col-sm-6 col-sm-offset-3"><a href="/"><img class="img-responsive" th:src="@{/images/logo.png}"></a></div><br/>
+                <h3>Login form</h3>
+                <p>Login with username and password only.</p>
+                <p><b>Login Info:<br>For Seller username: seller password:seller<br>For Admin username: admin password:admin</b></p>
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">
+                        Invalid Credentials.
+                    </div>
+                </div>
+                <div th:if="${param.error_msg}">
+                    <div class="alert alert-danger" th:text="${param.error_msg}">
+                        Invalid Credentials.
+                    </div>
+                </div>
+                <div th:if="${param.success_msg}">
+                    <div class="alert alert-danger" th:text="${param.error_msg}">
+                        Invalid Credentials.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

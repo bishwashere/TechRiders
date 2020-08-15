@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class Product implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     @NotBlank
@@ -39,7 +39,7 @@ public class Product implements Serializable {
 
     //@NotNull
 
-    Long addedBy;
+    private Long addedBy;
 
 
 

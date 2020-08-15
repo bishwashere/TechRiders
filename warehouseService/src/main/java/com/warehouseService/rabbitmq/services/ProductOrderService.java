@@ -10,10 +10,10 @@ import java.util.List;
 
 public interface ProductOrderService {
 
-    @PreAuthorize("hasPermission(#id,'order-management')")
+    @PreAuthorize("hasPermission(#noArgs,'order-management')")
     public List<ProductOrder> getAll();
 
-    @PreAuthorize("hasPermission(#id,'order-management')")
+    @PreAuthorize("hasPermission(#productOrder,'order-management')")
     public ProductOrder save(ProductOrder productOrder);
 
     @PreAuthorize("hasPermission(#id,'order-management')")
@@ -22,10 +22,10 @@ public interface ProductOrderService {
     @PreAuthorize("hasPermission(#id,'order-management')")
     public void deleteById(Long id);
 
-    @PreAuthorize("hasPermission(#id,'order-management')")
+    @PreAuthorize("hasPermission(#status,'order-management')")
     public List<ProductOrder> findByStatus(String status);
 
-    @PreAuthorize("hasPermission(#id,'order-management')")
+    @PreAuthorize("hasPermission(#user,'order-management')")
     public List<ProductOrder> findByBuyer(User user);
 
     public ProductOrder changeStatus(String status, Long id) throws NotFoundException;
