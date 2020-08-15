@@ -2,36 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3599e00-6bdc-4771-ad95-bd260d15def9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../front-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/configs/SpringSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/configs/SpringSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/configs/WebMvcConfigurerInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/java/com/techriders/frontservice/configs/WebMvcConfigurerInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_3_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/warehouseService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/warehouseService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../email-service/src/main/resources/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../email-service/src/main/resources/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-service/src/main/resources/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../front-service/src/main/resources/static/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/SpringSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/SpringSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/configs/WebMvcConfigurerInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ProductOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/warehouseService/rabbitmq/repositories/ProductOrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/warehouseService/rabbitmq/domains/ShippingAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/loginform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,45 +123,45 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="315" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597259128116" />
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597432821620">
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom" timestamp="1597459517205">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821620" />
+    <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517205" />
     <state width="1750" height="450" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597432821618">
+    <state width="1750" height="450" key="GridCell.Tab.0.center" timestamp="1597459517204">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821618" />
+    <state width="1750" height="450" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517204" />
     <state width="1750" height="450" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597432821617">
+    <state width="1750" height="450" key="GridCell.Tab.0.left" timestamp="1597459517202">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821617" />
+    <state width="1750" height="450" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517202" />
     <state width="1750" height="450" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716719" />
-    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597432821619">
+    <state width="1750" height="450" key="GridCell.Tab.0.right" timestamp="1597459517204">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821619" />
+    <state width="1750" height="450" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517204" />
     <state width="1750" height="450" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716720" />
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597432821623">
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom" timestamp="1597459517211">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821623" />
+    <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517211" />
     <state width="1750" height="450" key="GridCell.Tab.1.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716723" />
-    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597432821621">
+    <state width="1750" height="450" key="GridCell.Tab.1.center" timestamp="1597459517208">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821621" />
+    <state width="1750" height="450" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517208" />
     <state width="1750" height="450" key="GridCell.Tab.1.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
-    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597432821621">
+    <state width="1750" height="450" key="GridCell.Tab.1.left" timestamp="1597459517207">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821621" />
+    <state width="1750" height="450" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517207" />
     <state width="1750" height="450" key="GridCell.Tab.1.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716721" />
-    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597432821622">
+    <state width="1750" height="450" key="GridCell.Tab.1.right" timestamp="1597459517209">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597432821622" />
+    <state width="1750" height="450" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597459517209" />
     <state width="1750" height="450" key="GridCell.Tab.1.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597324716722" />
     <state x="473" y="291" width="845" height="538" key="find.popup" timestamp="1597345057770">
       <screen x="0" y="0" width="1792" height="1120" />
